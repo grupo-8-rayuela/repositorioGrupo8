@@ -6,110 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/product-styles.css">
+    <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+    <link rel="stylesheet" href="/css/header-style.css" title="cont">
     <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
     <title>Rayuela</title>
 </head>
 
 <body>
-    <header class="header-style">
-        <section class="top-header">
-            <i class="fa-solid fa-truck"></i>
-            <h4>Envío gratis a partir de $ 5000</h4>
-        </section>
-
-        <section class="topbar">
-            
-            <div class="burger-menu">
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("links");
-                        if (x.style.display === "block") {
-                            x.style.display = "none";
-                        } else {
-                            x.style.display = "block";
-                        }
-                    }
-                </script>
-                <ul id="links">
-                    <li><a href="/views/quienes-somos.html">Quienes Somos</a></li>
-                    <li><a href="/views/productCategory.html">Por edad</a></li>
-                    <li><a href="/views/productCategory.html">Por categoria</a></li>
-                    <li><a href="/views/productCategory.html">Por edad</a></li>
-                    <li><a href="/views/faq.html">FAQ</a></li>
-                    <li><a href="/views/contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-
-            <img id="logo" src="/img/logo4.png" alt="logo">
-            <nav>
-                <ul class="lista-nav">
-                    <li class="cart"><a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a></li>
-                    <li class="my-account"><a href="/register"><i class="fa-solid fa-user"></i></a></li>
-                </ul>
-            </nav>
-        </section>
-        <section class="search-bar">
-            <input type='search' placeholder="">
-            <button type="submit"><a href="#"></a><i class="fa-solid fa-magnifying-glass"></i></a></button>
-        </section>
-
-
+    <header>
 
     </header>
+    <main>
+        <section class="bread-crumbs">
+            <ul class="breadcrumbs">
+                <li><a href="/views/home.html>=">home</a></li>
+                <li><a href="productCategory.html">instruentos musicales</a></li>
+                <li><a href="productDetail.html">kit instrumento musical</a></li>
+            </ul>
+        </section>
 
-    <section class="bread-crumbs">
-        <ul class="breadcrumbs">
-            <li><a href="/views/home.html>=">home</a></li>
-            <li><a href="productCategory.html">instruentos musicales</a></li>
-            <li><a href="productDetail.html">kit instrumento musical</a></li>
-        </ul>
-    </section>
 
-    <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20." class="whatsapp"
-        target="_blank">
-        <i class="fa fa-whatsapp whatsapp-button"></i>
-    </a>
-    <section class="product">
-        <article class="info-principal">
-
-            <img src="\img\instrumentos.png">
-
-            <article class="product-info">
-                <span class="info">
-                    <h1 class="product-name">Kit musical</h1>
-                    <h2 class="precio">4250$</h2>
-                    <form class="add-to-cart" method="GET" action="/add-to-cart.html">
-                        <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping">
-                            </i>AGREGAR AL CARRITO</button>
-                    </form>
-                </span>
-
-                <span class="envio">
-                    <div class='shipping-icon'>
-                        <i class="fa-solid fa-truck"></i>
-                        <p class="destacado"> Envio gratis </p> _a partir de 5000$</p>
+        <section class="product">
+            <article class="product_infoPrincipal">
+                <div class="product_infoPrincipal_images">
+                    <img class='imagen-principal' src="\img\instrumentos.png">
+                   <a href="#"><img class='imagen-2' src="\img\instrumentos.png"></a> 
+                   <a href="#"><img class='imagen-3' src="\img\instrumentos.png"></a> 
+                    <div class="dots">
+                        <i id="seleccionado" class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
                     </div>
 
-                    <form action="/" method="post">
-                        <input type="text" name="cp" placeholder="Tu codigo postal">
-                        <button type="submit" ">CALCULAR</button>                
-                    </form>
-                 <a href=" https://codigopostal.com.ar/">No se mi CP</a>
-                            </div>
-                </span>
-            </article>
+                </div>
+                <div class="product_infoPrincipal_productInfo">
+                    <span class="productInfo_info">
+                        <h1 class="product-name">Kit musical</h1>
+                        <span class="reviews">
+                            <h2>Reviews (4)</h2>
+                            <p class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </p>
 
-        </article>
-            <article class="mas-info">
+                        </span>
+                        <h2 class="precio">4250$</h2>
+                        <form class="add-to-cart" method="GET" action="/add-to-cart.html">
+                            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping">
+                                </i>AGREGAR AL CARRITO</button>
+                        </form>
+                    </span>
+
+                    <span class="productInfo_envio">
+                        <div class='shipping-icon'>
+                            <i class="fa-solid fa-truck"></i>
+                            <p> <strong>Envio </strong>gratis a partir de 5000$</p>
+                        </div>
+
+                        <form action="/" method="post">
+                            <input type="text" name="cp" placeholder="Tu codigo postal">
+                            <button type="submit" ">CALCULAR</button>                
+                                </form>
+                                <a href=" https://codigopostal.com.ar/">No se mi CP</a>
+                </div>
+                </span>
+                </div>
+
+            </article>
+            <article class="product_masInfo">
                 <h3>Descripcion</h3>
                 <p>El Kit musical Golden 6 piezas incluye:
                     Cascabel, Flauta 20 cm, Xilofon, Maraca Baby, Castañuela y Guiro (Percusión).
                     Todos los instrumentos vienen dentro de una bolsa de Tela, los colores van rotando de acuerdo a la
                     disponibilidad de stock.</p>
             </article>
-            <article class="mas-info">
+            <article class="product_masInfo">
                 <h3>Información Adicional </h3>
                 <table class="info-table">
                     <tr>
@@ -126,84 +102,58 @@
                     </tr>
                 </table>
             </article>
-
-
-    </section>
-
-    <h2 id="uno">Tambien te puede gustar</h2>
-    <section class="tambien-te-puede-gustar">
-        <article class="card">
-            <img src="/img/xilofon1.png" alt="juguete1">
-            <h3>Xilofón</h3>
-            <p class="precio-card">5800$</p>
-            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
-                CARRITO</button>
-        </article>
-        <article class="card">
-            <img src="/img/maracas.png" alt="juguete2">
-            <h3>Maracas</h3>
-            <p class="precio-card">5800$</p>
-            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
-                CARRITO</button>
-        </article>
-        <article class="card">
-            <img src="\img\bloques-paraguas.png" alt="juguete3">
-            <h3>Bloques de madera</h3>
-            <p class="precio-card">2300$</p>
-            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
-                CARRITO</button>
-        </article>
-        <article class="card">
-            <img src="\img\cohete-multifuncion.png" alt="juguete3">
-            <h3>Cohete Multifuncion</h3>
-            <p class="precio-card">7200$</p>
-            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
-                CARRITO</button>
-        </article>
+        </section>
 
 
 
+        <h2 id="h-tambien-te-puede-gustar">Tambien te puede gustar</h2>
+        <section class="tambien-te-puede-gustar">
+            <article class="card">
+                <a href="#">
+                 <img src="/img/xilofon1.png" alt="juguete1">
+                <h3>Xilofón</h3>
+                <p class="precio-card">5800$</p>
+                <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
+                    CARRITO</button>
+                </a>
+            </article>
+            <article class="card">
+                <a href="#">
+                     <img src="/img/maracas.png" alt="juguete2">
+                <h3>Maracas</h3>
+                <p class="precio-card">5800$</p>
+                <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
+                    CARRITO</button>
+                </a>
+            </article>
+            <article class="card">
+                <a href="#">
+                    <img src="\img\bloques-paraguas.png" alt="juguete3">
+                <h3>Bloques</h3>
+                <p class="precio-card">2300$</p>
+                <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
+                    CARRITO</button>
+                </a>
+            </article>
+            <article class="card">
+               <a href="#"> 
+                <img src="\img\cohete-multifuncion.png" alt="juguete3">
+                <h3>Cohete</h3>
+                <p class="precio-card">7200$</p>
+                <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
+                    CARRITO</button>
+                </a>
+            </article>
 
-    </section>
+
+
+
+        </section>
+
+    </main>
     <footer>
-        <ul class="lista-footer">
-            <li>
-                <a href="#" class="quienes-somos">Quienes Somos</a>
-            </li>
-            <li class="redes">
-                <h4>Redes Sociales</h4>
-                <ul class="lista-redes">
-                    <li><a href="#"><img src="/img/icons8-twitter-48.png" alt=""></a></li>
-                    <li><a href="#"><img src="/img/icons8-instagram-48.png" alt=""></a></li>
-                    <li><a href="#"><img src="/img/icons8-twitch-48.png" alt=""></a></li>
-                </ul>
-            </li>
 
-            <li class="medios-de-pago">
-                <h4>Medios de Pago</h4>
-                <ul class="lista-medios-pago">
-                    <li><img src="/img/icons8-gift-card-48.png" alt=""></li>
-                    <li><img src="/img/icons8-visa-48.png" alt=""></li>
-                    <li><img src="/img/icons8-mastercard-48.png" alt=""></li>
-                </ul>
-            </li>
-
-            <li>
-                <a href='#'>F.A.Q</a>
-            </li>
-            <li class="contactenos">
-                <a href="#">Contactanos</a>
-            </li>
-        </ul>
-        <div>
-            <!--      <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20."
-                class="whatsapp" target="_blank">
-                <img src="/img/icons8-whatsapp-48.png" alt="">
-                <i class="fa fa-whatsapp whatsapp-button"></i>-->
-            </a>
-        </div>
     </footer>
-
 </body>
 
 </html>
