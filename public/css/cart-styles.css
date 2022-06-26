@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+ }
+/* Header */
+.top-header {
+    background-color: #CDE7D9;
+    color: rgb(124, 124, 124);
+    font-size: 15px;
+    height: 60px;
+    padding: 10px;
+    /* margin:auto; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.bottom-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+.burger-menu a {
+    color: rgb(109, 108, 108);
+    font-size: 24px;
+}
+#links {
+    display:none;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.header-logo img {
+    width: 150px;
+    margin-top:0;
+    margin-bottom: 0;
+}
+.nav a {
+    color: rgb(124, 124, 124);
+    font-size: 24px;
+    padding: 5px;
+}
+.search-bar input {
+    width: 90%;
+    border: rgb(124, 124, 124) solid 1px;
+    height: 32px;
+}
+.search-nav {
+    display:flex;
+}
+.search-nav button {
+    width:10%;
+    height: 32px;
+}
+.search-nav i {
+    color: rgb(109, 108, 108);
+    margin:0;
+}
+/* Body */
+#carritoCompras {
+    border: solid black 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:  #CDE7D9;
+    display: flex;
+    align-items: flex-start;
+    display: block;
+}
+#marcoCarrito {
+    border: solid black 2px;
+}
+#imagenProd {
+    width: 150px;
+    border: solid black 1px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 20px;
+}
+#descriProd {
+  width: 50%;
+  padding: 17px;
+  /* display: inline; */
+}
+#tachito {
+    padding: 17px;
+    font-size: 25px;
+}
+#precio {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+#formCantidad {
+    width: 50px;
+    height: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+#elemento1 {
+    display:flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+/* Costo Sin Envio */
+#subtSinEnv {
+    display: flex;
+    border-bottom: 20px;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+#fraseSubtSinEnv {
+    width: 80%;
+}
+#montoSinEnv {
+    /* display: flex; */
+    width: 20vw;
+    /* height: 40vh; */
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+/* Sección inferior */
+.seccionInf {
+    border: solid black 2px;
+    padding: 20px;
+}
+.seccionInf a {
+    text-decoration: underline;
+}
+.cuadroFormCalculo {
+    width: 70vw;
+    margin-top: 2px;
+    margin-bottom: -3px;
+    display: flex;
+}
+#cpCalculo {
+    margin-bottom: 5px;
+}
+.buttonCalcular {
+    width: 20vw;
+    text-align: center;
+}
+.radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+/* ENVIO A DOMICILIO */
+.envios{
+    display:flex;
+    flex-wrap:wrap;
+}
+#cuadroForm {
+    width: 40vw;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    display: flex;
+}
+.datosEnvio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.formDomicilio {
+    display: flex;
+    flex-wrap: wrap;
+}
+.BorderEnvioADomicilio {
+    border: solid black 2px;
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+}
+#logoEnDomicilio {
+    width: 30vw;
+    margin-top:0;
+    margin-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.totalFinal {
+    display: flex;
+    border: solid black 1px;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+    background-color: #CDE7D9;
+}
+#fraseTotal {
+    width: 80%;
+}
+#montoTotal {
+    width: 20vw;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+.botonComprar {
+    width: 20vw;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+.masProductos {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}

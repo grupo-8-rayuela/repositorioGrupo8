@@ -4,10 +4,248 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de compra Rayuela</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/4c9feabc71.js"
+    crossorigin="anonymous"></script>
+
+    <!-- Link con CSS -->
+    <link rel="stylesheet" href="/css/stylesPRL.css">
+
+    <!-- Fuente Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        
+    <!-- Fuente Monserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Roboto&display=swap" rel="stylesheet"> 
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+        </style>
+
+    <!-- Viewport -->
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0"> 
+        
 </head>
+<header class="header-style">
+    <section class="top-header">
+        <i class="fa-solid fa-truck"><h4>Envío gratis a partir de $ 5000</h4></i>  
+    </section>
+
+
+    <section class="topbar">
+        
+        <div class="burger-menu">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("links");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
+            <ul id="links">
+                <li><a href="/views/quienes-somos.html">Quienes Somos</a></li>
+                <li><a href="/views/productCategory.html">Por edad</a></li>
+                <li><a href="/views/productCategory.html">Por categoria</a></li>
+                <li><a href="/views/productCategory.html">Por edad</a></li>
+                <li><a href="/views/faq.html">FAQ</a></li>
+                <li><a href="/views/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="/"><img id="logo" src="/images/logo4.png" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="lista-nav">
+                <li class="cart"><a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <li class="my-account"><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="search-bar">
+        <input type='search' placeholder="">
+        <button type="submit"><a href="#"></a><i class="fa-solid fa-magnifying-glass"></i></a></button>
+    </section>
+
+
+
+</header>
+
 <body>
+
+    <div id="carritoCompras"><h2><i class="fa-solid fa-angle-left">
+        Carrito de Compras </i></h2></div>
     
+    <!-- Acá va a ir la sección de agregar al carrito -->
+    <section id="marcoCarrito">
+      <!-- Elemento 1 del carrito -->
+      <div id="elemento1">
+        <div id="imagenProd"><img src="/images/pizarra-mesa-expresion.png" alt=""></div>
+        <div id="parte1Elemento">
+            <div id="descriProd"><h5>Descripción del Producto</h5></div>
+            <div id="formCantidad">
+                <form action="" method="">
+                    <label>Cantidad</label>
+                    <select name="cantidad" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select>
+                </form>
+            </div>
+            
+        </div>
+        
+        <div id="parte2Elemento">
+           <div id="tachito"><i class="fa-solid fa-trash"></i></div> 
+          
+            <div id="precio"><h5>$2,000</h5></div>
+        </div>
+        
+      </div>
+
+    </section>
+    <!-- Subtotal sin envío -->
+    <div id="subtSinEnv">
+        <h3 id="fraseSubtSinEnv">Subtotal (sin envío):</h3>
+
+        <h3 id="montoSinEnv">$2,000</h3>
+    </div>
+
+    <!-- Sección del cuadro inferior -->
+    <section class="seccionInf">     
+
+    <div class="mediosDePago"><a href="#"><i class="fa-solid fa-credit-card"></i>Ver medios de pago</a></div>
+
+    <!--Radio buttons-->
+    <form action="" method="POST">
+    <div class="envios">
+
+        <input type="radio" name="envios" value="local" id="local" class="circulo">
+        <label for="local" class="radio"><i class="fa-solid fa-shop"> Retiro Gratis en el local</i></label>
+        <div><h5>Av.Siempre Viva 742 Ciudad </h5></div>
+        <div><h5>Lun a Vie de 10 a 18hs</h5></div>
+        
+        <input type="radio" name="envios" value="oca" id="oca">
+        <label for="oca" class="radio"><i class="fa-solid fa-mailbox">Retiro Gratis en Sucursal Oca</i></label>
+        <a href="#">Buscar sucursal</a>
+        
+        <input type="radio" name="envios" value="domicilio" id="domicilio">
+        <label for="domicilio" class="radio"><i class="fa-solid fa-truck"> Envio a domicilio</i></label>
+
+        <div class="cuadroFormCalculo"><input type="cpCalculo" placeholder="Tu codigo postal" name="cpCalculo" id="cpCalculo">
+        <button class="buttonCalcular"><h4>Calcular</h4></button>
+        
+        </div> 
+        <a href="#"><h5>No sé mi código postal</h5></a>
+        
+    </div>
+    </form>
+    </section>
+
+    <section class="BorderEnvioADomicilio">
+
+    <div><img id="logoEnDomicilio" src="/images/logo4.png" alt="logo"></div>
+    
+    <div>
+    <h3 class="datosEnvio">Datos de Envio a Domicilio</h3> 
+     <!-- Acá van los datos de las personas en un elemento flex -->
+     <form action="" method="POST"> 
+     <div class="formDomicilio">
+      <div id="textoForm"><label for="calle">Calle</label></div>
+      <div id="cuadroForm"><input type="text" name="calle" id="calle" required></div>
+
+      <div id="textoForm"><label for="numero">Número</label></div>
+      <div id="cuadroForm"><input type="number" name="numero" id="numero" required></div>
+
+      <div id="textoForm"><label for="depto">Piso/Depto</label></div>
+      <div id="cuadroForm"><input type="text" name="depto" id="depto" required></div>
+
+      <div id="textoForm"><label for="localidad">Localidad</label></div>
+      <div id="cuadroForm"><input type="text" name="localidad" id="localidad" required></div>
+      
+      <div id="textoForm"><label for="cp">Código Postal</label></div>
+      <div id="cuadroForm"><input type="text" name="cp" id="cp" required></div>
+      
+      <div id="textoForm"><label for="provincia">Provincia</label></div>
+      <div id="cuadroForm"><input type="text" name="provincia" id="provincia" required></div>
+
+      <div id="textoForm"><label for="celular">Celular</label></div>
+      <div id="cuadroForm"><input type="tel" name="celular" id="celular" placeholder="011-15XXXXXXXX" required></div>
+
+    </div>
+    </form>
+    </div>
+    </section>
+    <!-- Acá van los últimos 2 botónes -->
+    <div id="subtSinEnv">
+        <h3 id="fraseSubtSinEnv">Costo de Envío:</h3>
+        <h3 id="montoSinEnv">$200</h3>
+    </div>
+
+    <div class="totalFinal">
+        <h3 id="fraseTotal">TOTAL</h3>
+        <h3 id="montoTotal">$2,200</h3>
+
+    </div>
+
+    <div>
+        <button class="botonComprar"><h2>Comprar</h2></button>
+    </div>
+
+    <div class="masProductos">
+        <a href="/">Ver más productos</a>
+    </div>
+
 </body>
+
+<footer>
+    <ul class="lista-footer">
+        <li><a href="#" class="quienes-somos">Quienes Somos</a></li>
+        <li class="redes">
+            <h4>Redes Sociales</h4>
+        </li>
+            <!--<ul class="lista-redes">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitch"></i></li>
+            </ul>-->
+            <ul class="lista-redes">
+                <li><a href="#"><img src="/images/icons8-twitter-48.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/icons8-instagram-48.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/icons8-twitch-48.png" alt=""></a></li>        
+            </ul>
+        </li>
+        <li class="medios-de-pago">
+            <h4>Medios de Pago</h4>
+            <!--<ul class="lista-medios-pago">
+                <li><i class="fa-brands fa-cc-mastercard"></i></i></li>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+            </ul>-->
+            <ul class="lista-medios-pago">
+                <li><img src="/images/icons8-gift-card-48.png" alt=""></li>
+                <li><img src="/images/icons8-visa-48.png" alt=""></li>
+                <li><img src="/images/icons8-mastercard-48.png" alt=""></li>
+            </ul>
+        </li>
+        <li><a href='#'>F.A.Q</a></li>
+        <li class="contactenos"><a href="#">Contactanos</a></li>
+    </ul>
+    <div>
+        <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20." class="whatsapp" target="_blank">
+            <img src="/images/icons8-whatsapp-48.png" alt="">
+            <!--<i class="fa fa-whatsapp whatsapp-button"></i>-->
+        </a>
+    </div>
+</footer>
+
+
 </html>
+

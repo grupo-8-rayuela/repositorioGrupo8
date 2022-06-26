@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- iconos -->
+     <script src="https://kit.fontawesome.com/4c9feabc71.js"
+     crossorigin="anonymous"></script>
+ 
+     <!-- Link con CSS -->
+     <link rel="stylesheet" href="/css/stylesPRL.css">
+ 
+     <!-- Fuente Roboto -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+         
+     <!-- Fuente Monserrat -->
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Roboto&display=swap" rel="stylesheet"> 
+         <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+         </style>
+ 
+     <!-- Viewport -->
+     <meta name="viewport" content=
+     "width=device-width, initial-scale=1.0"> 
+
+     <header class="header-style">
+        <section class="top-header">
+            <i class="fa-solid fa-truck"><h4>Envío gratis a partir de $ 5000</h4></i>  
+        </section>
+    
+
+        <section class="topbar">
+            
+            <div class="burger-menu">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("links");
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                        }
+                    }
+                </script>
+                <ul id="links">
+                    <li><a href="/views/quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="/views/productCategory.html">Por edad</a></li>
+                    <li><a href="/views/productCategory.html">Por categoria</a></li>
+                    <li><a href="/views/productCategory.html">Por edad</a></li>
+                    <li><a href="/views/faq.html">FAQ</a></li>
+                    <li><a href="/views/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="/"><img id="logo" src="/images/logo4.png" alt="logo"></a>
+            </div>
+            <nav>
+                <ul class="lista-nav">
+                    <li class="cart"><a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li class="my-account"><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="search-bar">
+            <input type='search' placeholder="">
+            <button type="submit"><a href="#"></a><i class="fa-solid fa-magnifying-glass"></i></a></button>
+        </section>
+
+
+
+    </header>   
+
+</head>
+<body>
+
+    <main class="login">
+        <br>
+        <h3>Ingresar</h3>
+    
+        <form action="/" method="POST">
+            <input type="email" name="email" placeholder="E-mail" value="email" required>
+            <input type="password" name="password" placeholder="Contraseña" value="password" required>
+            <input type="submit" value="Ingresar" class="botonLogin">
+        </form>
+
+        <div class="links">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+            <br>
+            <a href="/register">Registrarte</a>
+        </div>
+    </main>
+
+    
+</body>
+
+<footer>
+    <ul class="lista-footer">
+        <li><a href="#" class="quienes-somos">Quienes Somos</a></li>
+        <li class="redes">
+            <h4>Redes Sociales</h4>
+        </li>
+            <!--<ul class="lista-redes">
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitch"></i></li>
+            </ul>-->
+            <ul class="lista-redes">
+                <li><a href="#"><img src="/images/icons8-twitter-48.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/icons8-instagram-48.png" alt=""></a></li>
+                <li><a href="#"><img src="/images/icons8-twitch-48.png" alt=""></a></li>        
+            </ul>
+        </li>
+        <li class="medios-de-pago">
+            <h4>Medios de Pago</h4>
+            <!--<ul class="lista-medios-pago">
+                <li><i class="fa-brands fa-cc-mastercard"></i></i></li>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+            </ul>-->
+            <ul class="lista-medios-pago">
+                <li><img src="/images/icons8-gift-card-48.png" alt=""></li>
+                <li><img src="/images/icons8-visa-48.png" alt=""></li>
+                <li><img src="/images/icons8-mastercard-48.png" alt=""></li>
+            </ul>
+        </li>
+        <li><a href='#'>F.A.Q</a></li>
+        <li class="contactenos"><a href="#">Contactanos</a></li>
+    </ul>
+    <div>
+        <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20." class="whatsapp" target="_blank">
+            <img src="/images/icons8-whatsapp-48.png" alt="">
+            <!--<i class="fa fa-whatsapp whatsapp-button"></i>-->
+        </a>
+    </div>
+</footer>
+</html>

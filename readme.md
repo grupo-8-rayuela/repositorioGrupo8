@@ -9,7 +9,7 @@ Rayuela es un proyecto integrador del curso de Programación web full stack que 
 - [Cintia Moll](https://github.com/CintiaMoll34 "Cintia Moll") (35) No tuve contacto anteriormente con el desarrollo web, este curso es mi primer experiencia y este mi primer proyecto.
 - [Denise Arcuri](https://github.com/DenuArcuri "Denise Arcuri") (27) No tengo experiencia previa en el programación. En mi trabajo obtendo información a través del lenguaje SQL y he trabajado con audio y sonido (protools & photoshop)
 - [Pablo Simkievich](https://github.com/pablosimkievich "Pablo Simkievich") (47) No tengo experiencia previa en programación ni desarrollo web. Pero vengo trabajando en PC con audio digital y aplicaciones de música desde hace 20 años. 
-- [RominaRodes](https://github.com/RominaRode "Perfil de GitHub") (43) Tengo como experiecia el armado de un woo-commerce para un emprendimiento de mi hermana pero esta es mi primera experiencia con html/css y las metodologias de desarrollo.
+- [Romina Rodes](https://github.com/RominaRode "Perfil de GitHub") (43) Tengo como experiecia el armado de un woo-commerce para un emprendimiento de mi hermana pero esta es mi primera experiencia con html/css y las metodologias de desarrollo.
 
 ------------
 
@@ -53,3 +53,14 @@ Se trata de una fabrica de juguetes argentina, seleccionada por los clientes a l
 
 ##### https://latiendamontessori.com
 Tienda online de productos montessori, muebles y juguetes de madera inspirados en filosofías y pedagogías no tradicionales. Elegida por sus productos y diseño sencillo y práctico.
+
+
+------------
+
+
+
+### Tablero de trabajo
+
+Para organizarnos en las tareas, para consultar que está haciendo cada miembro del equipo. Y para asignarnos funcionalidades, utilizamos como tablero de trabajo, la herramienta on-line Trello. El link a nuestro tablero de trabajo es el siguiente:
+
+##### https://trello.com/b/G10r0HVY/rayuela
