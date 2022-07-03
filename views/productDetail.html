@@ -7,12 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/product-styles.css" title="cont">
-    <link rel="stylesheet" href="/css/header-style.css" title="cont">
+    
     <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
     <title>Rayuela</title>
 </head>
 
 <body>
+    <header class="header-style">
+        <section class="top-banner">
+            <i class="fa-solid fa-truck"></i>
+            <h4>Envío gratis a partir de $ 5000</h4>
+        </section>
+        <section class="topbar">
+            <div class="topbar_burger-menu">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("links");
+                        if (x.style.display === "block") {
+                            x.style.display = "none";
+                        } else {
+                            x.style.display = "block";
+                        }
+                    }
+                </script>
+                <ul id="links">
+                    <li><a href="/views/quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="/views/productCategory.html">Por edad</a></li>
+                    <li><a href="/views/productCategory.html">Por categoria</a></li>
+                    <li><a href="/views/productCategory.html">Por edad</a></li>
+                    <li><a href="/views/faq.html">FAQ</a></li>
+                    <li><a href="/views/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        <section class="search-bar">
+            <img id="logo" src="/images/logo5.png" alt="logo">
+        <form class="search">
+            <input type="search" name="q" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </section>
+            <nav class="topbar_iconos-header">
+            <div class="topbar_nav">
+                <a href="/productCart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+            <div class="topbar_nav">
+                <a href="/login"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </nav>
+        </section>
+    </header>
     <main>
         <section class="bread-crumbs">
             <ul class="breadcrumbs">

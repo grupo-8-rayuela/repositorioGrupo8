@@ -1,23 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:ital,wght@0,300;1,300;1,400&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
-
-/* font-family: 'Dosis', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Lato', sans-serif;
-
-*/
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:ital,wght@0,300;1,300;1,400&family=Roboto:wght@300&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:ital,wght@0,300;1,300;1,400&family=Roboto:wght@300&display=swap');
-
-
-
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -26,29 +8,96 @@ font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
-
-header {
-    width: 100%;
-    background-color: rgb(232, 248, 245 ) ;
-    height: 200px;
+.header {
+    position:relative;
+    background-color: white;
+}
+.header-style{
+    width:100%;
+    position: fixed;
+    z-index: 100;
+    top:0;
+}
+.top-banner {
+    background-color: black;
+    font-size: 15px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-banner h4 {
+    font-size: 1rem;
+    color: white;
+}
+.top-banner i {
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+}
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+/*
+#menu {
+    background-color: rgb(189,212,213);
+}
+*/
+.topbar_iconos-header{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.topbar_nav a i{
+    color: rgb(151,151,151);
+    font-size: 30px;
+    transition: all 700ms;
+    margin: 5px;
+}
+.topbar_burger-menu{
+    justify-self: flex-start;
+}
+.topbar_burger-menu a {
+    color: rgb(109, 108, 108);
+    text-decoration: none;
+    margin: 10px;
+}
+.topbar_burger-menu i {
+    color: rgb(151,151,151);
+    font-size: 30px;
+    margin: 5px;
+    transition: all 700ms;
+}
+#links {
+    display:none;
+    text-decoration: none;
+}
+#logo {
+    width:80px;
+    margin: 5px;
+}
+.search-bar {
+    background-color: white;
+    width:100%;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-footer {
-    width: 100%;
-    background-color: #E8F6F3;
-    height: 200px;  
-}
 .search {
     background-color: white;
-    width: 300px;
-    height: 44px;
+    width: 80%;
+    height: 40px;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: solid 1px #d7d7d7;
+    border: solid 1px #D7D7D7;
   }
   .search input {
     border: none;
@@ -62,17 +111,14 @@ footer {
   .search button {
     all: unset;
     width: 44px;
-    height: 44px;
+    height: 40px;
   }
-  
   .search i {
     color: grey;
-    /* fill: currentColor; */
     width: 44px;
     font-size: 18px;
     height: 34px;
     padding: 8px;
-    
   }
 
 
