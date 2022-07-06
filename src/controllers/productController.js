@@ -20,11 +20,11 @@ const productController = {
     guardar : (req, res) => {
         let newProduct = req.body
         
-        console.log(req.body)
+        console.log(req.body);
         data.push(newProduct);
         fs.writeFileSync(dataPath, JSON.stringify(data, null, ' ')) 
-        console.log(newProduct) 
-        res.redirect('/')
+        console.log(newProduct);
+        res.redirect('/');
     },
     guardarSKU : (req, res) => {
         
