@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+
+
+<body>
+    <!--<%- include('../partials/header.ejs') %>-->
+    <p>
+        
+        <% data.map(e => { %>
+        <p><%= e.nombre %></p>
+        <% }) %>
+    </p>
+    
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

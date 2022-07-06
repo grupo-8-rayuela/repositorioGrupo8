@@ -9,5 +9,14 @@ router.get('/', (req, res) => {
 
 router.get('/kit-musical', productController.kitmusical);
 
+router.get('/alta-productos', productController.create);
+
+router.post('/alta-productos', productController.guardar)
+
+
+router.get('/alta-productos-SKU', productController.createSKU);
+
+router.post('/alta-productos-SKU', productController.guardarSKU)
+
 
 module.exports = router;
