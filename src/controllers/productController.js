@@ -53,18 +53,10 @@ module.exports = {
 
        res.render('product/categoria',{juguetesCategoria})
     },
-    /*getEdad: (req,res)=>{
-    let categoria = req.params.categoria;
-    let juguetesCategoria = data.filter(e => {
-        let claseEdad =e.edadRecomendada ;
-        let claseCategoria =e.categoria.replace(' ', '').toLowerCase() ;
-        
-        (claseEdad || claseCategoria) == categoria;
-})
-
-console.log(claseEdad)
-   console.log(jugueteCategoria)
-res.send(categoria)
-   //res.render('product/categoria',{juguetesCategoria})*/
+    getEdad: (req,res)=>{
+    let edad = req.params.edadrecomendada;
+    let juguetesEdad = data.filter(e => ((e.edadRecomendada).replace(' ','').toLowerCase() == edad));
+      console.log(juguetesEdad)
+       res.render('product/edad',{juguetesEdad});
 }
-
+}

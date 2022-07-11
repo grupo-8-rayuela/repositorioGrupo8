@@ -1,0 +1,32 @@
+
+
+h2.home_header {
+        font-size: 20px;
+        color: #999;
+    }
+
+
+
+
+#juguetes_home{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+#juguetes_home a img {
+    width:200px;
+}
+
+.unicoIrrepetible{
+    width:35%;
+
+}
+.home_categoria_card {
+    width: 35%;
+    margin: 10px; 
+
+}
+.home_categoria_card img{
+    width: 100%;
+}
