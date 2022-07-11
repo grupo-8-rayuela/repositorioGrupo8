@@ -9,7 +9,11 @@
   "imagenPrincipal": "instrumentos.png",
   "imagenesAdicionales": "",
   "descripcion": "El Kit musical Golden 6 piezas incluye: Cascabel, Flauta 20 cm, Xilofon, Maraca Baby, Castañuela y Guiro (Percusión). Todos los instrumentos vienen dentro de una bolsa de Tela, los colores van rotando de acuerdo a la disponibilidad de stock.",
-  "edadRecomendada": "3 a 6 años",
+  "edadRecomendada": [
+    "1",
+    "2",
+    "3"
+   ],
   "Edad recomendada": "3 a 6 años",
   "materiales": "Madera y Metal",
   "altura": "10",
@@ -96,7 +100,10 @@
   "imagenPrincipal": "cohete-multifuncion.png",
   "imagenesAdicionales": "",
   "descripcion": "En el cohete podemos encontrar: 12 salas, tales como: dormitorio, quirófano o laboratorio, en varios estilos y colores.",
-  "edadRecomendada": "Para todas las edades",
+  "edadRecomendada": [
+    "4",
+    "2"
+   ],
   "materiales": "Plastico y madera",
   "altura": "35",
   "ancho": "15",
@@ -131,7 +138,9 @@
   "imagenPrincipal": "banco didactico-4-en1.jpg",
   "imagenesAdicionales": "",
   "descripcion": "¡Banco didáctico 4 en 1 para desarrollar la motricidad y cognición de los más peques!",
-  "edadRecomendada": "6 meses a 1 año",
+  "edadRecomendada": [
+    "1"
+   ],
   "Edad recomendada": "1 a 3 años",
   "materiales": "Madera y metal",
   "altura": "40",
@@ -149,8 +158,11 @@
   "imagenPrincipal": "pizarra-mesa-expresion.png",
   "imagenesAdicionales": "",
   "descripcion": "¡Ideal para las clases virtuales de los chicos! ¿Por qué? Incluye un espacio para colocar la tablet o celular. Permite usar la pizarra anotando con marcador. Pueden dibujar o escribir mientras desayunan, almuerzan, meriendan o cenan. ¡Tiene portavasos!",
-  "edadRecomendada": "6 meses a 1 año",
-  "Edad recomendada": "1 a 3 años",
+  
+  "edadRecomendada": [
+    "1",
+    "2"
+   ],
   "materiales": "Madera",
   "altura": "25",
   "ancho": "30",
@@ -184,10 +196,33 @@
   "imagenPrincipal": "puzzle.jpg",
   "imagenesAdicionales": "",
   "descripcion": "lorem fnachn4uhrcorbcoUR3QNL",
-  "edadRecomendad": "mas de 6 años",
+  "edadRecomendada": [
+    "2",
+    "3"
+   ],
   "materiales": "Goma",
   "altura": "45",
   "ancho": "20",
   "profundidad": "2"
+ },
+ {
+  "SKU": "14",
+  "nombre": "cocodrilo",
+  "precio": "4500",
+  "enPromo": "no",
+  "descuento": "0",
+  "categoria": "Pizarras",
+  "imagenPrincipal": "bloques-paraguas.png",
+  "imagenesAdicionales": "",
+  "descripcion": "bjhvfchfdxddddddddddddddddddddddddddddddddd",
+  "edadRecomendada": [
+   "2",
+   "3"
+  ],
+  "edadRecomendad": "4",
+  "materiales": "Madera",
+  "altura": "2",
+  "ancho": "2",
+  "profundidad": "4"
  }
 ]

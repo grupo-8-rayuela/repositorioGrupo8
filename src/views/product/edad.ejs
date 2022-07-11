@@ -17,11 +17,11 @@
     
      
      <h1 id="categoryPage_title">
-
-       <%= juguetesEdad[0].edadRecomendada %>
+          Juguetes por edad
+      
      </h1>
      <section class="product-display">
-        <% juguetesEdad.map(e=> { %>
+        <% juguetesXedad.map(e=> { %>
             <article class="card">
                 <a href="/juguetes/<%= e.SKU %>">
                     <img src="/img/<%= e.imagenPrincipal %>" alt="juguete1">

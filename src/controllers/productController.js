@@ -54,9 +54,13 @@ module.exports = {
        res.render('product/categoria',{juguetesCategoria})
     },
     getEdad: (req,res)=>{
-    let edad = req.params.edadrecomendada;
-    let juguetesEdad = data.filter(e => ((e.edadRecomendada).replace(' ','').toLowerCase() == edad));
-      console.log(juguetesEdad)
-       res.render('product/edad',{juguetesEdad});
-}
-}
+            let edad = parseInt(req.params.edadrecomendada);
+    
+            let juguetesXedad = data.filter(e =>(e.edadRecomendada.includes(edad))? e : '')
+              
+            res.render('product/edad',{juguetesXedad})                                 
+        },
+    }
+       
+
+       
