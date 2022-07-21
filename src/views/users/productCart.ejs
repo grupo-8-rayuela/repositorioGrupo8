@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,64 +8,68 @@
     <title>Rayuela</title>
 
     <!-- iconos -->
-    <script src="https://kit.fontawesome.com/4c9feabc71.js"
-    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
 
     <!-- Link con CSS -->
     <link rel="stylesheet" href="/css/productCart-styles.css">
 
     <!-- Fuente Roboto -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Fuente Monserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Roboto&display=swap" rel="stylesheet">
-        <style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
-        </style>
+    </style>
 
     <!-- Viewport -->
-    <meta name="viewport" content=
-    "width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
-<header>
-    <%- include('../partials/header.ejs') %>
-</header>
-
 <body>
-    <div id="shoppingCart"><h2><i class="fa-solid fa-angle-left">
-        Carrito de Compras </i></h2></div>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+    <div id="shoppingCart">
+        <h2><i class="fa-solid fa-angle-left">
+                Carrito de Compras </i></h2>
+    </div>
 
     <!-- Acá va a ir la sección de agregar al carrito -->
     <section id="cartBorder">
-      <!-- Elemento 1 del carrito -->
-      <div id="element1">
-        <div id="imagenProd"><img src="/img/pizarra-mesa-expresion.png" alt=""></div>
-        <div id="element-part1">
-            <div id="descriProd"><h5>Descripción del Producto</h5></div>
-            <div id="form-quantity">
-                <form action="" method="">
-                    <label>Cantidad</label>
-                    <select name="cantidad" id="">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    </select>
-                </form>
+        <!-- Elemento 1 del carrito -->
+        <div id="element1">
+            <div id="imagenProd"><img src="/img/pizarra-mesa-expresion.png" alt=""></div>
+            <div id="element-part1">
+                <div id="descriProd">
+                    <h5>Descripción del Producto</h5>
+                </div>
+                <div id="form-quantity">
+                    <form action="" method="">
+                        <label>Cantidad</label>
+                        <select name="cantidad" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="element-part2">
+                <div id="trash"><i class="fa-solid fa-trash"></i></div>
+
+                <div id="price">
+                    <h5>$2,000</h5>
+                </div>
             </div>
 
         </div>
-
-        <div id="element-part2">
-           <div id="trash"><i class="fa-solid fa-trash"></i></div>
-
-            <div id="price"><h5>$2,000</h5></div>
-        </div>
-
-      </div>
 
     </section>
     <!-- Subtotal sin envío -->
@@ -77,67 +82,77 @@
     <!-- Sección del cuadro intermedio -->
     <section class="seccionInf">
 
-    <div class="mediosDePago"><a href="#"><i class="fa-solid fa-credit-card"></i>Ver medios de pago</a></div>
+        <div class="mediosDePago"><a href="#"><i class="fa-solid fa-credit-card"></i>Ver medios de pago</a></div>
 
-    <!--Radio buttons-->
-    <form action="" method="POST">
-    <div class="sendings">
+        <!--Radio buttons-->
+        <form action="" method="POST">
+            <div class="sendings">
 
-        <input type="radio" name="sendings" value="local" id="local" class="circulo">
-        <label for="local" class="radio"><i class="fa-solid fa-shop"> Retiro Gratis en el local</i></label>
-        <div><h5>Av.Siempre Viva 742 Ciudad </h5></div>
-        <div><h5>Lun a Vie de 10 a 18hs</h5></div>
+                <input type="radio" name="sendings" value="local" id="local" class="circulo">
+                <label for="local" class="radio"><i class="fa-solid fa-shop"> Retiro Gratis en el local</i></label>
+                <div>
+                    <h5>Av.Siempre Viva 742 Ciudad </h5>
+                </div>
+                <div>
+                    <h5>Lun a Vie de 10 a 18hs</h5>
+                </div>
 
-        <input type="radio" name="sendings" value="oca" id="oca">
-        <label for="oca" class="radio"><i class="fa-solid fa-mailbox">Retiro Gratis en Sucursal Oca</i></label>
-        <a href="#">Buscar sucursal</a>
-        <br>
-        <input type="radio" name="sendings" value="domicilio" id="domicilio">
-        <label for="domicilio" class="radio"><i class="fa-solid fa-truck"> Envio a domicilio</i></label>
+                <input type="radio" name="sendings" value="oca" id="oca">
+                <label for="oca" class="radio"><i class="fa-solid fa-mailbox">Retiro Gratis en Sucursal Oca</i></label>
+                <a href="#">Buscar sucursal</a>
+                <br>
+                <input type="radio" name="sendings" value="domicilio" id="domicilio">
+                <label for="domicilio" class="radio"><i class="fa-solid fa-truck"> Envio a domicilio</i></label>
 
-        <div class="cuadroFormCalculo"><input type="cpCalculo" placeholder="Tu codigo postal" name="cpCalculo" id="cpCalculo">
-        <button class="buttonCalcular"><h4>Calcular</h4></button>
+                <div class="cuadroFormCalculo"><input type="cpCalculo" placeholder="Tu codigo postal" name="cpCalculo"
+                        id="cpCalculo">
+                    <button class="buttonCalcular">
+                        <h4>Calcular</h4>
+                    </button>
 
-        </div>
-        <a href="#"><h5>No sé mi código postal</h5></a>
+                </div>
+                <a href="#">
+                    <h5>No sé mi código postal</h5>
+                </a>
 
-    </div>
-    </form>
+            </div>
+        </form>
     </section>
-    
+
     <!-- Envio a domicilio -->
     <section class="BorderEnvioADomicilio">
-    <div><img id="logoEnDomicilio" src="/img/logo5.png" alt="logo"></div>
+        <div><img id="logoEnDomicilio" src="/img/logo5.png" alt="logo"></div>
 
-    <div>
-    <h3 class="datosEnvio">Datos de Envio a Domicilio</h3>
-     <!-- Acá van los datos de las personas en un elemento flex -->
-     <form action="" method="POST">
-     <div class="formDomicilio">
-      <div id="textoForm"><label for="calle">Calle</label></div>
-      <div id="cuadroForm"><input type="text" name="calle" id="calle" required></div>
+        <div>
+            <h3 class="datosEnvio">Datos de Envio a Domicilio</h3>
+            <!-- Acá van los datos de las personas en un elemento flex -->
+            <form action="" method="POST">
+                <div class="formDomicilio">
+                    <div id="textoForm"><label for="calle">Calle</label></div>
+                    <div id="cuadroForm"><input type="text" name="calle" id="calle" required></div>
 
-      <div id="textoForm"><label for="numero">Número</label></div>
-      <div id="cuadroForm"><input type="text" name="numero" id="numero" required></div>
+                    <div id="textoForm"><label for="numero">Número</label></div>
+                    <div id="cuadroForm"><input type="text" name="numero" id="numero" required></div>
 
-      <div id="textoForm"><label for="depto">Piso/Depto</label></div>
-      <div id="cuadroForm"><input type="text" name="depto" id="depto" required></div>
+                    <div id="textoForm"><label for="depto">Piso/Depto</label></div>
+                    <div id="cuadroForm"><input type="text" name="depto" id="depto" required></div>
 
-      <div id="textoForm"><label for="localidad">Localidad</label></div>
-      <div id="cuadroForm"><input type="text" name="localidad" id="localidad" required></div>
+                    <div id="textoForm"><label for="localidad">Localidad</label></div>
+                    <div id="cuadroForm"><input type="text" name="localidad" id="localidad" required></div>
 
-      <div id="textoForm"><label for="cp">Código Postal</label></div>
-      <div id="cuadroForm"><input type="text" name="cp" id="cp" required></div>
+                    <div id="textoForm"><label for="cp">Código Postal</label></div>
+                    <div id="cuadroForm"><input type="text" name="cp" id="cp" required></div>
 
-      <div id="textoForm"><label for="provincia">Provincia</label></div>
-      <div id="cuadroForm"><input type="text" name="provincia" id="provincia" required></div>
+                    <div id="textoForm"><label for="provincia">Provincia</label></div>
+                    <div id="cuadroForm"><input type="text" name="provincia" id="provincia" required></div>
 
-      <div id="textoForm"><label for="celular">Celular</label></div>
-      <div id="cuadroForm"><input type="tel" name="celular" id="celular" placeholder="011-15XXXXXXXX" required></div>
+                    <div id="textoForm"><label for="celular">Celular</label></div>
+                    <div id="cuadroForm"><input type="tel" name="celular" id="celular" placeholder="011-15XXXXXXXX"
+                            required></div>
 
-    </div>
-    </form>
-    </div>
+                </div>
+            </form>
+        </div>
     </section>
     <!-- Acá van los últimos 2 botónes -->
     <div id="subtSinEnv">
@@ -152,7 +167,9 @@
     </div>
 
     <div>
-        <button class="botonComprar"><h2>Comprar</h2></button>
+        <button class="botonComprar">
+            <h2>Comprar</h2>
+        </button>
     </div>
 
     <div class="masProductos">
@@ -163,10 +180,12 @@
         <%- include('../partials/whatsappButton.ejs') %>
     </div>
 
-</body>
 
-<footer>
-    <%-include('../partials/footer.ejs') %>
-</footer>
+
+    <footer>
+        <%-include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
 
 </html>

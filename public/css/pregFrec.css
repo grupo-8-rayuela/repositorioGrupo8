@@ -1,3 +1,9 @@
+* {
+    padding: 20px;
+    text-decoration: none;
+}
+
+
 h2 {
     margin-top: 230px;
     text-decoration: underline;

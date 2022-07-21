@@ -2,105 +2,117 @@
 <html lang="en">
 <%-include('../partials/head.ejs')%>
 
-<body>
-    <%-include('../partials/header.ejs')%>
-    <main>
-        <section class="bread-crumbs">
-            <ul class="breadcrumbs">
-                <li><a href="/">Home</a></li>
-                <li><a href="productCategory.html"> <%= juguete.categoria %> </a></li>
-                <li><a href="productDetail.html"> <%= juguete.nombre %> </a></li>
-            </ul>
-        </section>
+    <body>
+        <%-include('../partials/header.ejs')%>
+            <main>
+                <section class="bread-crumbs">
+                    <ul class="breadcrumbs">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="productCategory.html">
+                                <%= juguete.categoria %>
+                            </a></li>
+                        <li><a href="productDetail.html">
+                                <%= juguete.nombre %>
+                            </a></li>
+                    </ul>
+                </section>
 
-<%=  %>
-        <section class="product">
-            <article class="product_infoPrincipal">
-                <div class="product_infoPrincipal_images">
-                    
-                    <img class='imagen-principal' src="/img/<%= juguete.imagenPrincipal %>">
-                   <a href="#"><img class='imagen-2' src="\img\xilofon1.png"></a> 
-                   <a href="#"><img class='imagen-3' src="\img\maracas.png"></a> 
-                    <div class="dots">
-                        <i id="seleccionado" class="fa-regular fa-circle"></i>
-                        <i class="fa-regular fa-circle"></i>
-                        <i class="fa-regular fa-circle"></i>
-                        <i class="fa-regular fa-circle"></i>
-                    </div>
+                <%= %>
+                    <section class="product">
+                        <article class="product_infoPrincipal">
+                            <div class="product_infoPrincipal_images">
 
-                </div>
-                <div class="product_infoPrincipal_productInfo">
-                    <span class="productInfo_info">
-                        <h1 class="product-name"> <%= juguete.nombre %> </h1>
-                        <span class="reviews">
-                            <h2>Reviews (4)</h2>
-                            <p class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                
-                            </p>
+                                <img class='imagen-principal' src="/img/<%= juguete.imagenPrincipal %>">
+                                <a href="#"><img class='imagen-2' src="\img\xilofon1.png"></a>
+                                <a href="#"><img class='imagen-3' src="\img\maracas.png"></a>
+                                <div class="dots">
+                                    <i id="seleccionado" class="fa-regular fa-circle"></i>
+                                    <i class="fa-regular fa-circle"></i>
+                                    <i class="fa-regular fa-circle"></i>
+                                    <i class="fa-regular fa-circle"></i>
+                                </div>
 
-                        </span>
-                        <h2 class="precio">$ <%= juguete.precio %> </h2>
-                        <form class="add-to-cart" method="POST" action="/add-to-cart">
-                            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping">
-                                </i>AGREGAR AL CARRITO</button>
-                        </form>
-                    </span>
+                            </div>
+                            <div class="product_infoPrincipal_productInfo">
+                                <span class="productInfo_info">
+                                    <h1 class="product-name">
+                                        <%= juguete.nombre %>
+                                    </h1>
+                                    <span class="reviews">
+                                        <h2>Reviews (4)</h2>
+                                        <p class="stars">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
 
-                    <span class="productInfo_envio">
-                        <div class='shipping-icon'>
-                            <i class="fa-solid fa-truck"></i>
-                            <p> <strong>Envio </strong>gratis a partir de 5000$</p>
-                        </div>
+                                        </p>
 
-                        <form action="/" method="post">
-                            <input type="text" name="cp" placeholder="Tu codigo postal">
-                            <button type="submit" ">CALCULAR</button>                
+                                    </span>
+                                    <h2 class="precio">$ <%= juguete.precio %>
+                                    </h2>
+                                    <form class="add-to-cart" method="POST" action="/add-to-cart">
+                                        <button type="submit" class="add-to-cart-button"><i
+                                                class="fa-solid fa-bag-shopping">
+                                            </i>AGREGAR AL CARRITO</button>
+                                    </form>
+                                </span>
+
+                                <span class="productInfo_envio">
+                                    <div class='shipping-icon'>
+                                        <i class="fa-solid fa-truck"></i>
+                                        <p> <strong>Envio </strong>gratis a partir de 5000$</p>
+                                    </div>
+
+                                    <form action="/" method="post">
+                                        <input type="text" name="cp" placeholder="Tu codigo postal">
+                                        <button type="submit" ">CALCULAR</button>                
                                 </form>
                                 <a href=" https://codigopostal.com.ar/">No se mi CP</a>
-                </div>
-                </span>
-                </div>
+                            </div>
+                            </span>
+                            </div>
 
-            </article>
-            <article class="product_masInfo">
-                <h3>Descripcion</h3>
-                <p> <%= juguete.descripcion %>
-                </p>
-            </article>
-            <article class="product_masInfo">
-                <h3>Información Adicional </h3>
-                <table class="info-table">
-                    <tr>
-                        <td>Edad: </td>
-                        <td> <%= juguete.edadrecomendada %> </td>
-                    </tr>
-                    <tr>
-                        <td>Materiales</td>
-                        <td> <%= juguete.materiales %> </td>
-                    </tr>
-                    <tr>
-                        <td>Dimensiones</td>
-                        <td>  <%= juguete.dimensiones %> </td>
-                    </tr>
-                </table>
-            </article>
-        </section>
+                        </article>
+                        <article class="product_masInfo">
+                            <h3>Descripcion</h3>
+                            <p>
+                                <%= juguete.descripcion %>
+                            </p>
+                        </article>
+                        <article class="product_masInfo">
+                            <h3>Información Adicional </h3>
+                            <table class="info-table">
+                                <tr>
+                                    <td>Edad: </td>
+                                    <td>
+                                        <%= juguete.edadrecomendada %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Materiales</td>
+                                    <td>
+                                        <%= juguete.materiales %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensiones</td>
+                                    <td>
+                                        <%= juguete.dimensiones %>
+                                    </td>
+                                </tr>
+                            </table>
+                        </article>
+                    </section>
 
-        <%-include('../partials/seccionTbnMeGusta.ejs') %> 
+                    <%-include('../partials/seccionTbnMeGusta.ejs') %>
 
-    </main>
+            </main>
 
-       
+            <footer>
+                <%-include('../partials/footer.ejs')%>
+            </footer>
     </body>
 
-    <footer>
-        <%-include('../partials/footer.ejs')%>
-    </footer>
-    </html>
-    
-  
+</html>

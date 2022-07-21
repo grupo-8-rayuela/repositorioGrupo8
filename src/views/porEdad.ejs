@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/porEdad.css" title="cont">
-        <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
-        <title>Rayuela</title>
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/porEdad.css" title="cont">
+    <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+    <title>Rayuela</title>
+</head>
 
 <body>
     <%- include('../views/partials/header.ejs') %>
-    <%- include('../views/partials/whatsappButton.ejs') %>
-    <section class="banner" id="home-banner">
-        <img src="\img\banner-azul.png" alt="juguetes con fondo verde">
-    </section>
+        <%- include('../views/partials/whatsappButton.ejs') %>
+            <section class="banner" id="home-banner">
+                <img src="\img\banner-azul.png" alt="juguetes con fondo verde">
+            </section>
 
 
 
-        <h2 class="home_header">Elegí por Edad</h2>
+            <h2 class="home_header">Elegí por Edad</h2>
 
-        <div class="container">
-            <article class="card">
-                
-                <img src="/img/categoria-6meses.png" alt="banco">
-            <div>
-                <a href="#">De 6 meses a 1 año</a>
+            <div class="container">
+                <article class="card">
+
+                    <img src="/img/categoria-6meses.png" alt="banco">
+                    <div>
+                        <a href="#">De 6 meses a 1 año</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/categoria-1año.png" alt="banco">
+                    <div>
+                        <a href="#">De 1 años a 3 años</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/categoria-3años.png" alt="banco">
+                    <div>
+                        <a href="#">De 3 años a 6 años</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/categoria-6años.png" alt="banco">
+                    <div>
+                        <a href="#">Mas de 6 años</a>
+                    </div>
+                </article>
+
             </div>
-            </article>
-
-            <article class="card">
-                <img src="/img/categoria-1año.png" alt="banco">
-                <div>
-                <a href="#">De 1 años a 3 años</a>
+            <div class="verTodosLosJuguetes">
+                <a href="/productos">Ver todos juguetes</a>
+                <section class="home_categoria">
             </div>
-            </article>
 
-            <article class="card">
-                <img src="/img/categoria-3años.png" alt="banco">
-                <div>
-                <a href="#">De 3 años a 6 años</a>
-            </div>
-            </article>
+            </section>
+            <%- include('../views/partials/seccionTbnMeGusta.ejs') %>
 
-            <article class="card">
-                <img src="/img/categoria-6años.png" alt="banco">
-                <div>
-                <a href="#">Mas de 6 años</a>
-            </div>
-            </article>  
-
-        </div>
-        <div class="verTodosLosJuguetes">
-            <a href="/productos" >Ver todos juguetes</a>
-            <section class="home_categoria">
-        </div>
-
-   </section> 
-   <%- include('../views/partials/seccionTbnMeGusta.ejs') %>
-   
-<footer>
-    <%-include('../views/partials/footer.ejs')%>
-</footer>
+                <footer>
+                    <%-include('../views/partials/footer.ejs')%>
+                </footer>
 
 
 </body>
+
 </html>

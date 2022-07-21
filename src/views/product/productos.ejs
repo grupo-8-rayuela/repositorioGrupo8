@@ -3,49 +3,52 @@
 <%- include('../partials/head.ejs') %>
 
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+        <link rel="stylesheet" href="/css/whatsapp.css">
+
+
+        <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+        <title>Rayuela</title>
+    </head>
+
     <body>
+        <%- include('../partials/header.ejs') %>
+            <section class="product-display">
+                <% data.map(e=> { %>
+                    <article class="card">
+                        <a href="/juguetes/<%= e.SKU %>">
+                            <img src="/img/<%= e.imagenPrincipal %>" alt="juguete1">
+                            <h3>
+                                <%= e.nombre %>
+                            </h3>
+                            <p class="precio-card">
+                                <%=e.precio%>$
+                            </p>
+                            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i>
+                                AGREGAR AL
+                                CARRITO</button>
+                        </a>
+                    </article>
 
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <% }) %>
+            </section>
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20."
+                    class="whatsapp" target="_blank">
+                    <img src="/img/icons8-whatsapp-48.png" alt="">
+                </a>
+            </div>
 
-            <link rel="stylesheet" href="/css/product-styles.css" title="cont">
-            <link rel="stylesheet" href="/css/whatsapp.css">
 
+            <footer>
+                <%- include('../partials/footer.ejs') %>
+            </footer>
 
-            <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
-            <title>Rayuela</title>
-        </head>
-         <%- include('../partials/header.ejs') %>
-        <section class="product-display">
-            <% data.map(e=> { %>
-                <article class="card">
-                    <a href="/juguetes/<%= e.SKU %>">
-                        <img src="/img/<%= e.imagenPrincipal %>" alt="juguete1">
-                        <h3>
-                            <%= e.nombre %>
-                        </h3>
-                        <p class="precio-card">
-                            <%=e.precio%>$
-                        </p>
-                        <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i>
-                            AGREGAR AL
-                            CARRITO</button>
-                    </a>
-                </article>
-
-                <% }) %>
-        </section>
-        <div>
-            <a href="https://api.whatsapp.com/send?phone=1155996575&text=Hola. como te podemos ayudar?%21%20." class="whatsapp" target="_blank">
-                <img src="/img/icons8-whatsapp-48.png" alt="">
-            </a>
-        </div>  
     </body>
-
-    <footer>
-        <%- include('../partials/footer.ejs') %>
-    </footer>
 
 </html>

@@ -3,6 +3,9 @@
 
 
 /* HEADER STYLES */
+* {
+    text-decoration: none;
+}
 
 .header {
     position:relative;
@@ -33,15 +36,18 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 .header-top-banner h4 {
     font-size: 1rem;
     color: white;
+    
 }
 .header-top-banner i {
     margin: 10px;
     color: white;
     font-size: 18px;
+    
 }
 
 /* Menu, buscar y botones */

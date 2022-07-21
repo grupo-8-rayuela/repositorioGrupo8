@@ -10,7 +10,7 @@ const data = JSON.parse(fs.readFileSync(dataPath, "UTF-8"));
 
 module.exports = {
     productList: (req, res) => {
-        
+
         res.render('product/productos', { data }) // products.ejs
     },
     productDetail: (req, res) => {
@@ -50,20 +50,20 @@ module.exports = {
     getCategory: (req, res) => {
         let categoria = req.params.categoria;
         let juguetesCategoria = data.filter(e => ((e.categoria).replace(' ', '').toLowerCase() == categoria))
-       
 
-       res.render('product/categoria',{juguetesCategoria})
+
+        res.render('product/categoria', { juguetesCategoria })
     },
 
-    getEdad: (req,res)=>{
-        
+    getEdad: (req, res) => {
+
         let edad = req.params.edadrecomendada;
 
-        let juguetesXedad = data.filter(e =>(e.edadRecomendada.includes(edad))? e : '')
+        let juguetesXedad = data.filter(e => (e.edadRecomendada.includes(edad)) ? e : '')
 
-        res.render('product/edades',{juguetesXedad})     
-                                
+        res.render('product/edades', { juguetesXedad })
+
     },
-   
+
 }
 
