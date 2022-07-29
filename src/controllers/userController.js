@@ -1,32 +1,34 @@
 const path = require('path');
-//const login= path.join(__dirname,'/views/users/login')
 const fs = require('fs');
 const { markAsUntransferable } = require('worker_threads');
-const { join } = require('path');
-const pathUserDB = path.join(__dirname, '../database/users.json');
-const userDB = JSON.parse(fs.readFileSync(pathUserDB, 'utf-8'));
 const User = require('../model/User');
 const bcrypt = require('bcryptjs');
-
-/*let allUsers = userDB.map ( e => {
-    return {
-        id: e.id,
-        nombre: e.nombre,
-        apellido: e.apellido,
-        email: e.email,
-        telefono: e.telefono,
-        domicilio: e.domicilio,
-        password: e.password,
-        confirmPassword: e.confirmPassword,
-        fotoPerfil: e.fotoPerfil
-    }
-});*/
-
+const { findByField } = require('../model/User');
+const { send } = require('process');
 
 
 const userController = {
     login : (_req, res) => {
        res.render(path.join(__dirname,'../views/users/login')) // login ejs
+    },
+    processLogin: (req,res)=>{
+        const { email,
+        password}=req.body;
+        let userToLogin = User.findByField('email', email);
+        if(userToLogin){
+            let passwordMatch = bcrypt.compareSync(password, userToLogin.password);
+            if(passwordMatch){
+                delete userToLogin.password 
+                req.session.userLogged = userToLogin
+                
+               res.redirect('/')
+             
+            }else{
+                res.send('Contra invalida')
+            }
+        }else{
+                res.send('no se encontro el mail registrado')
+        }
     },
     registro : (_req, res) => {
         res.render(path.join(__dirname,'../views/users/register.ejs')) // registro.ejs
@@ -74,8 +76,40 @@ const userController = {
         res.render('users/userEdit', {userEdit})  //  pagina de deición de usuario
     },
     userEditSave: (req, res) => {
-        User.edit()
-        res.render('users/userList', {allUsers})
+            const nuevoId = parseInt(req.body.id);
+            const nuevoNombre = req.body.nombre;
+            const nuevoApellido = req.body.apellido;
+            const nuevoEmail = req.body.email;
+            const nuevoTelefono = req.body.telefono;
+            const nuevoDomicilio = req.body.domicilio;
+            const nuevopassword = req.body.password;
+            const nuevoconfirmpassword = req.body.confirmPassword;
+            const nuevofotoPerfil = req.file ? req.file.filename : "";
+    
+            let allUsers = JSON.parse(fs.readFileSync(User.filename, 'utf-8'));     
+            allUsers.map( e => {
+                if (e.id == nuevoId) {
+                    e.id = nuevoId
+                    e.nombre = nuevoNombre;
+                    e.apellido = nuevoApellido;
+                    e.email = nuevoEmail;
+                    e.telefono = nuevoTelefono;
+                    e.domicilio = nuevoDomicilio;
+                    e.password = nuevopassword;
+                    e.confirmPassword = nuevoconfirmpassword;
+                    e.fotoPerfil =  nuevofotoPerfil == "" ? e.fotoPerfil:  nuevofotoPerfil;
+                }
+            });
+    
+            fs.writeFile(User.filename, JSON.stringify(allUsers, null, " "), (error) => {
+                if (error) {
+                    res.send(error);
+                } else {
+                    res.render('users/userList', {allUsers})
+                }
+                
+            })
+        
         
     },
     userDelete: (req, res) => {

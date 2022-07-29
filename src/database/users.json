@@ -1,14 +1,14 @@
 [
  {
   "id": 1,
-  "nombre": "Victorrrrrrrrr",
+  "nombre": "Victor",
   "apellido": "Saralegui",
   "email": "raymond@mailg.com",
   "telefono": "1525489762",
-  "domicilio": "Maipu 237777",
+  "domicilio": "Maipu 237",
   "password": "1234",
   "confirmPassword": "1234",
-  "fotoPerfil": "img-user-1658860270772.jpg"
+  "fotoPerfil": "img-user-1657903507971.png"
  },
  {
   "id": 2,
@@ -273,5 +273,38 @@
   "password": "332211",
   "confirmPassword": "332211",
   "fotoPerfil": ""
+ },
+ {
+  "id": 27,
+  "nombre": "Andrés",
+  "apellido": "Broda",
+  "email": "bro@gmall.com",
+  "telefono": "1199665588",
+  "domicilio": "Juan Jose Paso 5566",
+  "password": "654",
+  "confirmPassword": "654",
+  "fotoPerfil": ""
+ },
+ {
+  "id": 28,
+  "nombre": "Nicolás ",
+  "apellido": "Pueyrredon",
+  "email": "nicop@gmoll.com",
+  "telefono": "1198765987",
+  "domicilio": "Formosa 432",
+  "password": "115566",
+  "confirmPassword": "115566",
+  "fotoPerfil": ""
+ },
+ {
+  "id": 29,
+  "nombre": "Romina",
+  "apellido": "Rodesssssssssss",
+  "email": "rominarodes@gmail.com",
+  "telefono": "1555996575",
+  "domicilio": "mmm",
+  "password": "$2a$10$6g2zoinVnB9woY3KpwAi7eSdt3.EJhQ/NgGTbZ4JYGCmbs.R9fQ4O",
+  "confirmPassword": "1234",
+  "fotoPerfil": "img-user-1659056206857.jpg"
  }
 ]

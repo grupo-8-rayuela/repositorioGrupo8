@@ -50,34 +50,10 @@ return false
 return finalUsers
 
 },
-edit: ()=>{
-        let userEdited = {
-            ...req.body,
-            nuevoId: parseInt(req.body.id),
-            nuevopassword: bcrypt.hashSync(req.body.password, 10),
-            nuevoconfirmpassword: bcrypt.hashSync(req.body.confirmPassword, 10), 
-            nuevofotoPerfil: req.file ? req.file.filename : "",
-        }
 
-   let allUsers = User.getAllUsers();     
-    
-         allUsers.map( e => {
-               if (e.id == nuevoId) {
-                    e = userEdited
-        }
-    });
-    fs.writeFileSync(User.filename, JSON.stringify(allUsers, null, ' '), (err)=> {
-        if(err){
-return false
-}else{
-    return allUsers
-
-} })
-},
 
 
 }
-
 
 
 

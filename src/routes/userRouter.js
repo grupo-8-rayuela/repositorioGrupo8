@@ -22,6 +22,7 @@ router.get('/usuarios', userController.usersList) // todos los usuarios
 router.get('/usuario/:id', userController.userDetail) // detalle de usuario
 
 router.get('/login', userController.login); // login
+router.post('/login', userController.processLogin)
 
 router.get('/registro', userController.registro);  // trae formulario registro
 router.post('/registro', uploadFile.single('fotoPerfil'), userController.userCreate)  //  post de registro de usuarios graba data

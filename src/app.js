@@ -6,6 +6,7 @@ const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session')
 
 app.use(express.static(path.join(__dirname,'../public')));
 
@@ -15,6 +16,12 @@ app.use(morgan('dev'));                  //muestar mas info de errores
 app.use(methodOverride('_method'));        //permite editar datos
 app.use(express.urlencoded({ extended: false }));  //capturainfo formulario
 app.use(express.json()); // y si queremos lo pasa json
+app.use(session({
+    secret: "Secreto",
+    resave: false,
+    saveUninitialized: false
+}))
+
 
 app.use('/', mainRouter);
 app.use(userRouter);
