@@ -6,6 +6,7 @@
     font-family: cursive, sans-serif;
     font-weight: 400;
     font-size: 16px;
+    
 }
 .whatsapp {
     position:fixed;
@@ -62,6 +63,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 .top-banner h4 {
     font-size: 1rem;

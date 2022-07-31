@@ -5,7 +5,7 @@ const { markAsUntransferable } = require('worker_threads');
 const pathUserDB = path.join(__dirname, '../database/users.json');
 const userDB = JSON.parse(fs.readFileSync(pathUserDB, 'utf-8'));
 
-const allUsers = userDB.map ( e => {
+const allUsers = userDB.map(e => {
     return {
         id: e.id,
         nombre: e.nombre,
@@ -22,19 +22,19 @@ const allUsers = userDB.map ( e => {
 
 
 const userController = {
-    login : (req, res) => {
-       res.render(path.join(__dirname,'../views/users/login')) // login ejs
+    login: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/login')) // login ejs
     },
-    registro : (req, res) => {
-        res.render(path.join(__dirname,'../views/users/register.ejs')) // registro.ejs
+    registro: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/register.ejs')) // registro.ejs
     },
-    productCart : (req, res) => {
-        res.render(path.join(__dirname,'../views/users/productCart.ejs')) //  productCart.ejs
+    productCart: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/productCart.ejs')) //  productCart.ejs
     },
     userCreate: (req, res) => {
         let readJSON = fs.readFileSync(pathUserDB, 'utf-8');
         let jsonParseado = JSON.parse(readJSON);
-        
+
         const id = jsonParseado[jsonParseado.length - 1].id;
         const newId = id + 1;
 
@@ -60,16 +60,16 @@ const userController = {
 
         res.redirect('/login');
     },
-    quienesSomos : (req,res) => {
-        res.render (path.join(__dirname,'../views/users/quienesSomos.ejs'))  //quienesSomos.ejs
+    quienesSomos: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/quienesSomos.ejs'))  //quienesSomos.ejs
     },
 
-    preguntasFrecuentes : (req,res) => {
-        res.render (path.join(__dirname,'../views/users/preguntasFrecuentes.ejs')) //preguntasFrecuentes.ejs
+    preguntasFrecuentes: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/preguntasFrecuentes.ejs')) //preguntasFrecuentes.ejs
     },
 
-    contacto : (req,res) => {
-        res.render (path.join(__dirname,'../views/users/contacto.ejs')) //contacto.ejs
+    contacto: (req, res) => {
+        res.render(path.join(__dirname, '../views/users/contacto.ejs')) //contacto.ejs
     },
 };
 

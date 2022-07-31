@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,47 +10,47 @@
     <!-- Link con CSS -->
     <link rel="stylesheet" href="/css/contacto.css">
 
-      <!-- Viewport -->
-      <meta name="viewport" content=
-      "width=device-width, initial-scale=1.0">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      
+
 </head>
 
-<header>
-    <%- include('../partials/header.ejs') %>
-</header>
-
 <body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+    </header>
+
+
     <div class="body-Contacto">
- <div class="datosContacto">
-   <h3>whatsapp</h3>
-   <h4>15-XXXX-XXXX</h4>
-<br>
- <h3>Email</h3>
- <h4>grupo_8_rayuela@outlook.com</h4>
-   
- </div>
+        <div class="datosContacto">
+            <h3>whatsapp</h3>
+            <h4>15-XXXX-XXXX</h4>
+            <br>
+            <h3>Email</h3>
+            <h4>grupo_8_rayuela@outlook.com</h4>
 
- <div class="contactoEmail">
-    <form action="/contactoEmailForm" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" value="Nombre" required>
-        <input type="text" name="apellido" placeholder="Apellido" value="Apellido" required>
-        <input type="email" name="email" placeholder="E-mail" value="E-mail" required>
-        <textarea name="comentario" placeholder="Deje su comentario" value="comentario" required></textarea>   
-    </form>
-    <button id=buttonsubmit type="submit" value="submitir">Submitir</button>
+        </div>
 
- </div>
-</div>
-    
+        <div class="contactoEmail">
+            <form action="/contactoEmailForm" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre" value="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" value="Apellido" required>
+                <input type="email" name="email" placeholder="E-mail" value="E-mail" required>
+                <textarea name="comentario" placeholder="Deje su comentario" value="comentario" required></textarea>
+            </form>
+            <button id=buttonsubmit type="submit" value="submitir">Submitir</button>
 
+        </div>
+    </div>
+
+    <div>
+        <%- include('../partials/whatsappButton.ejs') %>
+    </div>
+
+
+    <footer>
+        <%-include('../partials/footer.ejs') %>
+    </footer>
 </body>
-<div>
-    <%- include('../partials/whatsappButton.ejs') %>
-</div>
-
-
-<footer>
-    <%-include('../partials/footer.ejs') %>
-</footer>
+</html>

@@ -8,14 +8,15 @@
     <title>Rayuela</title>
     <link rel="stylesheet" href="/css/home-styles.css">
     <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
-<header>
-    <%- include('../views/partials/header.ejs') %>
-</header>
-
 <body>
+    <header>
+        <%- include('../views/partials/header.ejs') %>
+    </header>
+
+
     <section class="banner" id="home-banner">
         <img src="\img\banner-azul.png" alt="juguetes con fondo verde">
     </section>
@@ -26,9 +27,14 @@
                 <img src="/img/products/banco didactico-4-en1.jpg" alt="banco">
                 <h3> <%= arrayMock[0].nombre %> </h3>
             </a>
-            <p>  <%= arrayMock[0].precio %> </p>
-            <p class="cuotas"> <%= arrayMock[0].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
+            <p>
+                <%= arrayMock[0].precio %>
+            </p>
+            <p class="cuotas">
+                <%= arrayMock[0].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
 
         </article>
 
@@ -37,9 +43,14 @@
                 <img src="/img/products/cocodrilo-de-arrastre.png" alt="cocodrilo">
                 <h3> <%= arrayMock[1].nombre %> </h3>
             </a>
-            <p> <%= arrayMock[1].precio %> </p>
-            <p id="cuotas"> <%= arrayMock[1].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
+            <p>
+                <%= arrayMock[1].precio %>
+            </p>
+            <p id="cuotas">
+                <%= arrayMock[1].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
 
         </article>
 
@@ -48,10 +59,15 @@
                 <img src="/img/products/cohete-multifuncion.png" alt="cohete">   
                 <h3> <%= arrayMock[2].nombre %> </h3>
             </a>
-            <p> <%= arrayMock[2].precio %> </p>
-            <p class="cuotas"> <%= arrayMock[2].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
-            
+            <p>
+                <%= arrayMock[2].precio %>
+            </p>
+            <p class="cuotas">
+                <%= arrayMock[2].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
+
         </article>
 
         <article class="producto">
@@ -59,9 +75,14 @@
                 <img src="/img/products/pizarra-mesa-expresion.png" alt="pizarra">
                 <h3> <%= arrayMock[3].nombre %> </h3>
             </a>
-            <p> <%= arrayMock[3].precio %> </p>
-            <p class="cuotas"> <%= arrayMock[3].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
+            <p>
+                <%= arrayMock[3].precio %>
+            </p>
+            <p class="cuotas">
+                <%= arrayMock[3].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
 
         </article>
 
@@ -70,9 +91,14 @@
                 <img src="/img/products/torre-geometrica madera.png" alt="torre">
                 <h3> <%= arrayMock[4].nombre %> </h3>
             </a>
-            <p> <%= arrayMock[4].precio %> </p>
-            <p class="cuotas"> <%= arrayMock[4].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
+            <p>
+                <%= arrayMock[4].precio %>
+            </p>
+            <p class="cuotas">
+                <%= arrayMock[4].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
 
         </article>
 
@@ -81,9 +107,14 @@
                 <img src="/img/products/carro-andador-de-madera.jpg" alt="carrito">
                 <h3> <%= arrayMock[5].nombre %> </h3>
             </a>
-            <p> <%= arrayMock[5].precio %> </p>
-            <p class="cuotas"> <%= arrayMock[5].cuotas %> </p>
-            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button>
+            <p>
+                <%= arrayMock[5].precio %>
+            </p>
+            <p class="cuotas">
+                <%= arrayMock[5].cuotas %>
+            </p>
+            <button type="submit" class="add-to-cart-button">AGREGAR AL CARRITO<i
+                    class="fa-solid fa-bag-shopping"></i></button>
 
         </article>
 
@@ -120,12 +151,13 @@
         <div>
             <%- include('../views/partials/whatsappButton.ejs') %>
         </div>
-   </section>
-   
-</body>
+    </section>
 
-<footer>
-    <%-include('../views/partials/footer.ejs')%>
-</footer>
+
+
+    <footer>
+        <%-include('../views/partials/footer.ejs')%>
+    </footer>
+</body>
 
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+    <link rel="stylesheet" href="/css/product-styles.css" title="cont">
 
 
         <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
@@ -37,12 +37,37 @@
                 </a>
             </article>
 
-            <% }) %>
-    </section>
+<body>
+    <%- include('../partials/header.ejs') %>
 
 
-    <%- include('../partials/footer.ejs') %>
+        <h1 id="categoryPage_title">
+            Juguetes por edad
+
+        </h1>
+        <section class="product-display">
+            <% juguetesXedad.map(e=> { %>
+                <article class="card">
+                    <a href="/juguetes/<%= e.SKU %>">
+                        <img src="/img/<%= e.imagenPrincipal %>" alt="juguete1">
+                        <h3>
+                            <%= e.nombre %>
+                        </h3>
+                        <p class="precio-card">
+                            <%=e.precio%>$
+                        </p>
+                        <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i>
+                            AGREGAR AL
+                            CARRITO</button>
+                    </a>
+                </article>
+
+                <% }) %>
+        </section>
+
+
+        <%- include('../partials/footer.ejs') %>
 </body>
-    
+
 
 </html>
