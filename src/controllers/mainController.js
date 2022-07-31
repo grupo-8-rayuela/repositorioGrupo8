@@ -41,15 +41,25 @@ module.exports = {
         res.render('home', { arrayMock, arrayMock }); // home ejs 
     },
     indexCategorias: (req, res) => {
-
-        let categorias =
-            [{ categoria: 'Sensoriales', img: "/img/categoria-sensorial.png" },
-            { categoria: 'Instrumentos Musicales', img: "/img/instrumentos.png" },
-            { categoria: 'Rompecabezas', img: "/img/categoria-rompecabezas.png" },
-            { categoria: 'Movimientos', img: "/img/categoria-movimientos.png" },
-            ]         //en un futuro agregar a base de datos
-
-        res.render('pruebaHome', { data, categorias }); // prueba de pagina home dinamica
+     
+        let categorias= 
+            [{categoria: 'Sensoriales', img:"/img/categoria-sensorial.png"},
+            {categoria: 'Instrumentos Musicales', img:"/img/categoria-instrumentos.png"},
+            {categoria: 'Rompecabezas', img:"/img/categoria-rompecabezas.png"},
+            {categoria: 'Movimientos', img:"/img/categoria-movimientos.png"} ,
+        ]         //en un futuro agregar a base de datos
+        
+    let cuatro = [];
+    for(let i=0; i<=3; i++){ 
+      cuatro.push(data.filter(e => e.enPromo === true)[i]);
+      };
+      
+      if(cuatro.length<4){ 
+        for(let i=0; i<(4-cuatro.length);i++){
+          cuatro.push(data.filter(e => e.enPromo !== true)[i])
+        }
+      }
+        res.render('pruebaHome', {data, categorias, cuatro}); // prueba de pagina home dinamica
     },
     indexEdad: (req, res) => {
         let edad =

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="/css/controlPanel-styles.css" title="cont">
+            <link rel="stylesheet" href="/css/whatsapp.css">
+
+
+            <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+           
+            <title>Listado de Juguetes</title>
+            <link rel="icon" href="/img/logo-icono.png">
+        </head>
+        <body>
+     
+        <%- include('../partials/header.ejs') %>  
+
+<div class="nav">
+      
+    <form class="search-by-name" action="/search" method="GET" >
+    <input type="text" name="keywords" placeholder="Busca un juguete">
+    <button type="submit" class="form-button" >Buscar</button>
+</form>
+
+
+<a href="/crearProducto" id="create-link-button"> <button class="form-button">Crear un juguete</button> </a>
+</div>
+
+<section class="product-display">
+    
+            <% data.map(e=> { %>
+                <article class="card">
+                    <a href="/juguetes/<%= e.id %>">
+                        <img src="/img/products/<%= e.imagenPrincipal %>" alt="juguete1">
+                        <h3>
+                            <%= e.nombre %>
+                        </h3>
+                        <p>ID:<%=e.id%>
+                         </p>
+                        <div class="form-buttons">
+                            <a href="../edit/<%=e.id%>"> <button type="submit" class="form-button">EDIT</button></a>
+
+                            <form action="../<%=e.id%>?_method=DELETE" method="POST">
+                                <button type="submit" class="form-button">DELETE</button>
+                            </form>
+                        </div>
+
+                </article>
+
+                <% }) %>
+            
+                
+                
+            </section>
+
+    </body>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>

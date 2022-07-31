@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+            <link rel="stylesheet" href="/css/whatsapp.css">
+
+
+            <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+            <title>Listado de Juguetes</title>
+        </head>
+        <body>
+     
+        <%- include('../partials/header.ejs') %>  
+
+
+      
+    <form class="search-by-name" action="/search" method="GET" >
+    <input type="text" name="keywords" placeholder="Busca un juguete">
+    <button type="submit" class="add-to-cart-button" >Buscar</button>
+</form>
+
+
+<a href="/crearProducto" id="create-link-button"> <button class="add-to-cart-button">Crear un juguete</button> </a>
+            
+
+<section class="product-display">
+    
+    <% if(searchResult.length>0){%>  
+
+            <% searchResult.map(e=> { %>
+                <article class="card">
+                    <a href="/juguetes/<%= e.id %>">
+                        <img src="/img/products/<%= e.imagenPrincipal %>" alt="juguete1">
+                        <h3>
+                            <%= e.nombre %>
+                        </h3>
+                        <p class="precio-card">
+                            <%=e.precio%>$
+                        </p>
+                        <div class="form-buttons">
+                            <a href="../edit/<%=e.id%>"> <button type="submit" class="form-button">EDIT</button></a>
+
+                            <form action="../<%=e.id%>?_method=DELETE" method="POST">
+                                <button type="submit" class="form-button">DELETE</button>
+                            </form>
+                        </div>
+
+                </article>
+
+                <% }) }else{%>
+                    <div class="col-12">
+                        <h2 style="color: tomato;"> No hay productos que coincidan con esa búsqueda</h2>
+                    </div>
+
+                <%  }  %>
+                
+            
+                
+                
+            </section>
+
+    </body>
+
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</html>

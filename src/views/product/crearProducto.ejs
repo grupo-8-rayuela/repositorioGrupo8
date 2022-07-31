@@ -1,6 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head.ejs')%>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/product-styles.css" title="cont">   
+        <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+        <title>Crear Juguete</title>
+        <link rel="icon" href="/img/logo-icono.png">
+    </head>
+    
+    
+
+<body>
+  
+   <main class="main__form">
+    <form action="../crearProducto" method="POST" class="create-form">
+        <div class="form-logo">
+        <img id="logo" src="/img/logo5.png" alt="logo">
+        
+    </div>
+        <div class="control-formulario">
+            <label for="nombre-producto">Nombre del producto:</label>
+            <input type="text" name="nombre" class="input-control" required>
+        </div>
+        <div class="control-formulario">
+            <label for="precio">Precio:</label>
+            <input type="text" name="precio" class="input-control" required>
+        </div>
+
+        <div class="control-formulario" style="display:none">
+            <label for="en-oferta">Esta en oferta:</label>
+            <input type="radio" name="enPromo" value=true>Si
+            <input type="radio" name="enPromo" value=false selected>No
+           </div> 
+           <div class="control-formulario" style="display:none">   
+            <label for="descuento">Descuento a aplicar</label>
+            <input type="number" name="descuento" class="input-control" value=0 placeholder="25">
+        </div>
+
+        <div class="control-formulario">
+            <label>Categorias</label>
+            <select name="categoria" class="input-control" >
+                <option value="Sensoriales">Sensoriales</option>
+                <option value="Instrumentos Musicales">Instrumentos Musicales</option>
+                <option value="Movimientos">Movimientos</option>
+                <option value="Rompecabezas">Rompecabezas</option>
+                <option value="Pizarras">Pizarras</option>
+            </select>
+        </div>  
+
+
+        <div class="control-formulario">
+            <label for="materiales">Materiales:</label><br>
+            <input type="text" name="materiales" class="input-control" >
+        </div>
+                
+        
+        <div class="control-formulario" id="form-images">
+            <label for="imagen-producto">Seleccionar la imagen principal:</label>
+            <input type="file" name="imagenPrincipal" class="control" accept="image/jpg, image/png"></>
+        </div>
+        <div class="control-formulario">
+            
+            <label for="dimensiones">Dimensiones en cm:</label><br>
+            <label><input type="text" name="altura" class="dimensiones">Ancho</label>
+           <label><input type="number" name="ancho" class="dimensiones">Altura</label>
+            <label><input type="number" name="profundidad" class="dimensiones">Profundidad</label>
+        </div> 
+
+        <div class="control-formulario" id="form-images">
+            <label for="imagen-producto">Seleccionar imagenes adicionales:</label>
+            <input type="file" name="imagenesAdicionales" class="control" multiple ></>
+        </div>
+        
+        <div class="control-formulario" id="form-edad-recomendada">
+            <label>Edad recomendada:</label>
+            <label for="6 meses a 1 año">
+                <input type="checkbox" name="edadRecomendada" value=1 >6 meses a 1 año
+            </label>
+            <label for="1 a 3 años"> <input type="checkbox" name="edadRecomendada" value=2 >1 a 3
+                años
+            </label>
+            <label for="3 a 6 años"><input type="checkbox" name="edadRecomendada" value=3 >3 a 6
+                años"
+            </label>
+            <label for="mas de 6 años"><input type="checkbox" name="edadRecomendad" value= 4 >mas de 6 años
+            </label>
+        </div>
+        
+        <div class="control-formulario" id="form-description">
+            <label id="descripcion">Descripcion del producto:</label>
+            <textarea name="descripcion" class="textarea" placeholder="Descricion del juguete"></textarea>
+        </div>
+       
+        
+        <div class="form-buttons">
+       <button type="reset" class="form-button">RESET</button>
+        <button type="submit" class="form-button">GUARDAR</button>
+    </div>
+    </form>
+  
+</main>
 
 
 

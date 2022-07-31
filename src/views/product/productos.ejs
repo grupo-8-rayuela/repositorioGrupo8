@@ -45,9 +45,26 @@
             </div>
 
 
-            <footer>
-                <%- include('../partials/footer.ejs') %>
-            </footer>
+            <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+            <title>Rayuela</title>
+        </head>
+         <%- include('../partials/header.ejs') %>
+        <section class="product-display">
+            <% data.map(e=> { %>
+                <article class="card">
+                    <a href="/juguetes/<%= e.id %>">
+                        <img src="/img/products/<%= e.imagenPrincipal %>" alt="juguete1">
+                        <h3>
+                            <%= e.nombre %>
+                        </h3>
+                        <p class="precio-card">
+                            <%=e.precio%>$
+                        </p>
+                        <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i>
+                            AGREGAR AL
+                            CARRITO</button>
+                    </a>
+                </article>
 
     </body>
 

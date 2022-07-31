@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../partials/head.ejs')%>
 
-    <body>
-        <%-include('../partials/header.ejs')%>
-            <main>
-                <section class="bread-crumbs">
-                    <ul class="breadcrumbs">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="productCategory.html">
-                                <%= juguete.categoria %>
-                            </a></li>
-                        <li><a href="productDetail.html">
-                                <%= juguete.nombre %>
-                            </a></li>
-                    </ul>
-                </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <%= %>
-                    <section class="product">
-                        <article class="product_infoPrincipal">
-                            <div class="product_infoPrincipal_images">
+        <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+        <link rel="stylesheet" href="/css/whatsapp.css">
+
+
+        <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
+       
+        <title><%=juguete.nombre%> - Rayuela</title>
+        <link rel="icon" href="/img/logo-icono.png">
+    </head>
+
+<body>
+    <%-include('../partials/header.ejs')%>
+    <main>
+        <section class="bread-crumbs">
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li><a href="/categorias/<%= juguete.categoria.replace( ' ', '').toLowerCase() %>"> <%= juguete.categoria %> </a></li>
+                <li><a href="productDetail.html"> <%= juguete.nombre %> </a></li>
+            </ul>
+        </section>
+
+
+        <section class="product">
+            <article class="product_infoPrincipal">
+                <div class="product_infoPrincipal_images">
+                    
+                    <img class='imagen-principal' src="/img/products/<%= juguete.imagenPrincipal %>">
+                    
+            
+                    
+            <%if(Array.isArray(juguete.imagenesAdicionales) ){%>   
+                        <% for(let i=0; i < juguete.imagenesAdicionales.length; i++){%> 
+                            <a href="#"><img class='imagenAdicional-<%=i+1 %>' src="/img/products/<%=juguete.imagenesAdicionales[i]%>"></a> 
+                                <%}}else if(!Array.isArray(juguete.imagenesAdicionales) && juguete.imagenesAdicionales === ""){%> 
+                                    <a href="#" style="display:none"><img class='imagenAdicional-1' src="/img/products/<%=juguete.imagenesAdicionales%>"></a>
+                                    <%}else{%>
+                                    <a href="#"><img class='imagenAdicional-1' src="/img/products/<%=juguete.imagenesAdicionales%>"></a>
+                                        <%}%>       
+
+                    <div class="dots">
+                        <i id="seleccionado" class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                        <i class="fa-regular fa-circle"></i>
+                    </div>
 
                                 <img class='imagen-principal' src="/img/<%= juguete.imagenPrincipal %>">
                                 <a href="#"><img class='imagen-2' src="\img\xilofon1.png"></a>
@@ -74,39 +104,48 @@
                             </span>
                             </div>
 
-                        </article>
-                        <article class="product_masInfo">
-                            <h3>Descripcion</h3>
-                            <p>
-                                <%= juguete.descripcion %>
-                            </p>
-                        </article>
-                        <article class="product_masInfo">
-                            <h3>Información Adicional </h3>
-                            <table class="info-table">
-                                <tr>
-                                    <td>Edad: </td>
-                                    <td>
-                                        <%= juguete.edadrecomendada %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Materiales</td>
-                                    <td>
-                                        <%= juguete.materiales %>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Dimensiones</td>
-                                    <td>
-                                        <%= juguete.dimensiones %>
-                                    </td>
-                                </tr>
-                            </table>
-                        </article>
-                    </section>
+            </article>
+            <article class="product_masInfo">
+                <h3>Descripcion</h3>
+                <p> <%= juguete.descripcion %>
+                </p>
+            </article>
+            <article class="product_masInfo">
+                <h3>Información Adicional </h3>
+                <table class="info-table">
+                    <tr>
+                        <td>Edad: </td>
+                        <td> <%= juguete.edadRecomendada %> </td>
+                    </tr>
+                    <tr>
+                        <td>Materiales</td>
+                        <td> <%= juguete.materiales %> </td>
+                    </tr>
+                    <tr>
+                        <td>Dimensiones</td>
+                        <td><%= juguete.ancho %>cm x <%= juguete.altura %>cm x <%= juguete.profundidad %>cm </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
 
-                    <%-include('../partials/seccionTbnMeGusta.ejs') %>
+        <h2 id="h-tambien-te-puede-gustar">Tambien te puede gustar</h2>
+    <section class="tambien-te-puede-gustar">
+        
+        <% cuatro.map( e => {%> 
+        <article class="card">
+            <a href="../juguetes/<%=e.id%>">
+                <img src="/img/products/<%=e.imagenPrincipal%>" alt="juguete1">
+            <h3><%= e.nombre %></h3>
+            <p class="precio-card"><%= e.precio %></p>
+            <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping"></i> AGREGAR AL
+                CARRITO</button>
+            </a>
+        </article>
+        <%})%>
+        
+
+    </section>
 
             </main>
 

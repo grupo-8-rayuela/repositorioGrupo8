@@ -1,0 +1,65 @@
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 300px;
+}
+
+
+.product-display{
+    display:flex;
+    flex-flow: row wrap;
+    margin: 20px;
+
+}
+.card{
+    flex: 15%;
+    margin: 4px;
+    padding:5px;
+    border: solid 1px rgb(182, 182, 182);
+  
+
+}
+
+.card img{
+    width: 100%;
+}
+.card a{
+    text-decoration: none;
+}
+.card h3,p{
+    font-size: 18px;
+    font-weight: 600;
+    color: grey;
+    text-align: center;
+}
+.form-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-button{
+    background-color: rgb(45, 185, 138);
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border:none;
+    transition: all 500ms;
+    
+}
+.form-button:hover {
+    color:rgb(45, 185, 138);
+    background-color:rgb(212, 212, 212);
+    
+}
+.form-buttons form{
+    margin-right: 35px;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px rgb(180, 179, 179);
+    transform: scale(102%);
+
+}
