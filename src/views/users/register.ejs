@@ -30,19 +30,25 @@
           
 </head>
 
-<header>
-    <%- include('../partials/header.ejs')%>
-</header>
-
 <body>
+
+    <header>
+        <%- include('../partials/header.ejs')%>
+    </header>
+
     <main class="register">
         <h3>Registrate</h3>
             <br>
-        <form action="/registro" method="POST">
+        <form action="/registro" method="POST" enctype="multipart/form-data" >
             
             <input type="text" name="nombre" placeholder="Nombre"  required>
             <input type="text" name="apellido" placeholder="Apellido"  required>
             <input type="email" name="email" placeholder="E-mail"  required>
+            <% if(locals.errors && errors.email){%>
+                <div>
+                    <p><%= errors.email.msg %></p>
+                </div>
+                <%}%>
             <input type="number" name="telefono" placeholder="Telefono"  required>
             <input type="text" name="domicilio" placeholder="Domicilio"  required>
             <input type="password" name="password" placeholder="Contraseña"  required>
@@ -51,9 +57,9 @@
             <!-- Foto de Usuario -->
             <div class="register-look-for-img">
                 <h4>Foto de perfil (opcional)</h4>
-                <input type="file" name="fotoPerfil" required>
+                <input type="file" name="fotoPerfil">
             </div>
-        </form>
+        
             <br>
             
             <!-- Terminos y Condiciones -->
@@ -64,23 +70,22 @@
             </div>
             <br>
              <!-- Botones -->
-    <div id="buttonRegister">
-    <button id=buttonR type="reset" value="Borrar" >Borrar</button>
-    <button id=buttonR type="submit" value="registrarse">Registrarse</button>
+            <div id="buttonRegister">
+                 <button id=buttonR type="reset" value="Borrar" >Borrar</button>
+                 <button id=buttonR type="submit" value="registrarse">Registrarse</button>
     
-</div>  
-        
+            </div>  
+        </form>
 
         <div>
             <%- include('../partials/whatsappButton.ejs') %>
         </div>
-    </main> 
-    
-    
-</body>
+        <footer>
+            <%-include('../partials/footer.ejs') %>
+        </footer>
 
-<footer>
-    <%-include('../partials/footer.ejs') %>
-</footer>
+    </main> 
+       
+</body>
 
 </html>

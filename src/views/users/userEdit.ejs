@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayuela</title>
+
+      <!-- iconos -->
+      <script src="https://kit.fontawesome.com/4c9feabc71.js"
+      crossorigin="anonymous"></script>
+  
+      <!-- Link con CSS -->
+      <link rel="stylesheet" href="/css/register-styles.css">
+  
+      <!-- Fuente Roboto -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+          
+      <!-- Fuente Monserrat -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&family=Roboto&display=swap" rel="stylesheet"> 
+          <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap');
+          </style>
+  
+      <!-- Viewport -->
+      <meta name="viewport" content=
+      "width=device-width, initial-scale=1.0"> 
+          
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.ejs')%>
+    </header>
+
+    <main class="register">
+        <h3>Formulario de edición del usuario nro. <%= userEdit.id %></h3>
+            <br>
+        <form action="/edicion-usuario?_method=PUT" method="POST" enctype="multipart/form-data">
+            
+            <input type="text" name="id" placeholder="Nombre" value="<%= userEdit.id %>" readonly="true">
+            <input type="text" name="nombre" placeholder="Nombre" value="<%= userEdit.nombre %>" required>
+            <input type="text" name="apellido" placeholder="Apellido" value="<%= userEdit.apellido %>"  required>
+            <input type="email" name="email" placeholder="E-mail" value="<%= userEdit.email %>" required>
+            <input type="number" name="telefono" placeholder="Telefono" value="<%= userEdit.telefono %>" required>
+            <input type="text" name="domicilio" placeholder="Domicilio" value="<%= userEdit.domicilio %>"  required>
+            <input type="password" name="password" placeholder="Contraseña" value="<%= userEdit.password %>" required>
+            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" value="<%= userEdit.confirmPassword %>" required>
+            
+            <!-- Foto de Usuario -->
+            <div class="register-look-for-img">
+                <h4>Foto de perfil (opcional)</h4>
+                <input type="file" name="fotoPerfil">
+            </div>
+        
+            <br>
+            
+            <!-- Terminos y Condiciones -->
+            <div>
+                <div class="register-termYCond"><a href="#">Terminos y Condiciones</a></div>
+                <div class="register-termYCond">¿Ya tienes cuenta?</div>
+                <div class="register-termYCond"><a href="/login">Ingresá</a></div>
+            </div>
+            <br>
+             <!-- Botones -->
+            <div id="buttonRegister">
+                 <button id=buttonR type="reset">Reset</button>
+                 <button id=buttonR type="submit">Guardar</button>
+    
+            </div>  
+        </form>
+
+        <div>
+            <%- include('../partials/whatsappButton.ejs') %>
+        </div>
+        <footer>
+            <%-include('../partials/footer.ejs') %>
+        </footer>
+
+    </main> 
+       
+</body>
+
+</html>

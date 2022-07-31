@@ -30,8 +30,15 @@ module.exports = {
             for(let i=0; i<(4-cuatro.length);i++){
               cuatro.push(data.filter(e => e.categoria !== juguete.categoria)[i])
             }
-          }
-      res.render("product/productDetail", { juguete, cuatro});           
+          };
+           let starRaitingSum = 0;
+            for(let i =0; i<juguete.reviews.length; i++){
+              (starRaitingSum +   juguete.reviews[i].raiting)
+            }
+            let starRaitingWidth = starRaitingSum/juguete.reviews.length;
+            
+         
+      res.render("product/productDetail", { juguete, cuatro, starRaitingWidth});           
     } else {
       res.send("No existe el juguete");
     }
@@ -62,6 +69,7 @@ module.exports = {
       altura: req.body.altura,
       ancho: req.body.ancho,
       profundidad: req.body.profundidad,
+      reviews: [],
     };
 
        data.push(newProduct);

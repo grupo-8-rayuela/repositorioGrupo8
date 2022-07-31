@@ -57,17 +57,18 @@
                     <span class="productInfo_info">
                         <h1 class="product-name"> <%= juguete.nombre %> </h1>
                         <span class="reviews">
-                            <h2>Reviews (4)</h2>
-                            <p class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                                
-                            </p>
-
+                          
+                            <h2>Reviews (<%=juguete.reviews.length%>)</h2>
+                      
+                            <div class="stars-outer">
+                                <div class="stars-inner"></div>
+                            </div>
+                            <div class="stars-inner" ></div>
+                          
                         </span>
+                     
+
+                     
                         <h2 class="precio">$ <%= juguete.precio %> </h2>
                         <form class="add-to-cart" method="POST" action="/add-to-cart">
                             <button type="submit" class="add-to-cart-button"><i class="fa-solid fa-bag-shopping">

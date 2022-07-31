@@ -13,15 +13,17 @@
     font-size: 14px;
 }
 
+.banner{
+    width:100%;
+    margin-top: 127px;
+   
+}
 
 .banner img {
     width: 100%;
-    height: 150px;
-    margin-top: 156px;
-    display: flex;
     object-fit: cover;
     object-position: 0px 70%;
-    position: relative;
+    height: 300px;
 }  
 
 

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:ital,wght@0,300;1,300;1,400&family=Roboto:wght@300&display=swap');
+
+/* HOME STYLES */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.banner{
+    width:100%;
+    margin-top: 127px;
+   
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0px 70%;
+    height: 300px;
+}  
+
+
+.lista-de-usuarios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-list-tittle {
+    font-size: 2rem;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;    
+}
+
+.user-list-link {
+    text-decoration: none;
+}
+
+.user-list-link:visited {
+    color: #000;
+}
+
+.producto {
+    width: 44%;
+    border-radius: 5px;
+    margin: 25px 10px;
+    padding: 5px;
+    justify-content: space-around;
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 5px;
+    transition: all 700ms;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 15px 0px;
+}
+
+.producto h3 {
+    color: #142D4C;
+}
+
+.producto h3, p {
+    text-align: center;  
+}
+
+.producto p {
+    color: #C9753D;
+}
+
+
+.producto a {
+    text-decoration: none;
+}
+
+.producto a:visited {
+    color: #7D7D7D;
+}
+
+.producto img:hover {
+    opacity: 0.6;
+    background-color: white;
+    transform: scale(1.07);  
+    /*background-color:  rgb(131, 131, 150, 0.3);*/
+    border-radius: 15px; 
+}
+
+.add-to-cart-button {
+    background-color: #056676;
+    /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: none;
+    font-size: 12x;
+    font-weight: 400;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    transition: all 0.3s;
+    color: #A3D2CA;
+}
+
+.add-to-cart-button i {
+    margin: 10px;
+}
+.add-to-cart-button:hover {
+    background-color: #D45D79;
+    color: #424874;    
+}
+
+.add-to-cart-button:active {
+    transform: scale(1.05);
+    /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);*/
+}
+
+.categorias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto-categoria {
+    width: 91vw;
+    margin: 25px 10px;
+    border-radius: 5px;
+    /*border: 3px solid rgb(131, 131, 150, 0.3);*/
+    justify-content: space-around;
+}
+
+.producto-categoria img {
+    width: 80%;
+    padding: 10px;
+    transition: all 700ms;
+    margin: 15px 0px;
+}
+
+.producto-categoria h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px;
+    color: #142D4C;
+}
+
+.producto-categoria a {
+    text-decoration: none;
+}
+
+.producto-categoria a:visited {
+    color: #000;
+}
+
+.producto-categoria img:hover {
+    opacity: 0.6;
+    background-color: white;
+    transform: scale(1.05);    
+    /*background-color:  rgb(131, 131, 150, 0.3);*/
+    border-radius: 15px;
+}
+
+@media (min-width: 361px) {
+    .producto {
+        width: 40%;
+    }
+
+    .producto img {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .galeria-juguetes {
+        justify-content: space-around;
+    }
+   
+    .galeria-juguetes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .producto-categoria {
+        margin: 35px;
+    }
+}
+
+@media (min-width: 980px) {
+    header {
+        width: 100vw;
+    }
+    
+    .producto  {
+        width: 25%;
+    }
+
+    .producto img {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #logo {
+        width: 10%;
+        margin-left: 20px;
+    }
+    .galeria-juguetes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .search-bar {
+        margin-left: 20px;
+    }
+    .producto-categoria {
+        width: 42%;
+        margin-left: 41px;
+    }
+    .categorias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}

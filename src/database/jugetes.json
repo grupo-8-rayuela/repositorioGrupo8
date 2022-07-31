@@ -15,7 +15,10 @@
     "ancho": "15",
     "profundidad": "20",
     "dimensiones": "20 cm x 10 cm x 10 cm",
-    "rating": 45
+    "reviews": [
+      { "userId": 3, "review": "Lorem", "rating": 78 },
+      { "userId": 3, "review": "Lorem", "rating": 50 }
+    ]
   },
   {
     "id": 2,
@@ -32,7 +35,8 @@
     "altura": "36",
     "ancho": "22",
     "profundidad": "16",
-    "dimensiones": "15 cm x 10 cm x 5 cm"
+    "dimensiones": "15 cm x 10 cm x 5 cm",
+    "reviews": []
   },
   {
     "id": 3,
@@ -66,7 +70,6 @@
     "altura": "43",
     "ancho": "52",
     "profundidad": "25"
-    
   },
   {
     "id": 5,
@@ -83,7 +86,6 @@
     "altura": "15",
     "ancho": "15",
     "profundidad": "10"
-  
   },
   {
     "id": 6,
@@ -100,7 +102,6 @@
     "altura": "35",
     "ancho": "15",
     "profundidad": "10"
-    
   },
   {
     "id": 7,
@@ -241,7 +242,7 @@
     "descuento": "2",
     "categoria": "Sensoriales",
     "imagenPrincipal": "bloques-paraguas.png",
-    "imagenesAdicionales": "bloques-paraguas.png" ,
+    "imagenesAdicionales": "bloques-paraguas.png",
     "descripcion": "banco didactico-4-en1.jpg",
     "edadRecomendada": ["1", "2"],
     "materiales": "Madera",
@@ -298,5 +299,21 @@
     "altura": "45",
     "ancho": "5",
     "profundidad": "555"
+  },
+  {
+    "id": 21,
+    "nombre": "Prueba jason reviews",
+    "precio": "45",
+    "descuento": "0",
+    "categoria": "Instrumentos Musicales",
+    "imagenPrincipal": "maracas.png",
+    "imagenesAdicionales": "instrumentos.png",
+    "descripcion": "gfdddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "edadRecomendada": ["1", "2"],
+    "materiales": "madera",
+    "altura": "1",
+    "ancho": "12",
+    "profundidad": "2",
+    "reviews": []
   }
 ]

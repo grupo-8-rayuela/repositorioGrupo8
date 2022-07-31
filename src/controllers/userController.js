@@ -1,77 +1,135 @@
 const path = require('path');
-//const login= path.join(__dirname,'/views/users/login')
 const fs = require('fs');
 const { markAsUntransferable } = require('worker_threads');
-const pathUserDB = path.join(__dirname, '../database/users.json');
-const userDB = JSON.parse(fs.readFileSync(pathUserDB, 'utf-8'));
-
-const allUsers = userDB.map ( e => {
-    return {
-        id: e.id,
-        nombre: e.nombre,
-        apellido: e.apellido,
-        email: e.email,
-        telefono: e.telefono,
-        domicilio: e.domicilio,
-        passWord: e.password,
-        confirmPassword: e.confirmPassword,
-        fotoPerfil: e.fotoPerfil
-    }
-});
-
+const User = require('../model/User');
+const bcrypt = require('bcryptjs');
+const { findByField } = require('../model/User');
+const { send } = require('process');
 
 
 const userController = {
-    login : (req, res) => {
+    login : (_req, res) => {
        res.render(path.join(__dirname,'../views/users/login')) // login ejs
     },
-    registro : (req, res) => {
+    processLogin: (req,res)=>{
+        const { email,
+        password}=req.body;
+        let userToLogin = User.findByField('email', email);
+        if(userToLogin){
+            let passwordMatch = bcrypt.compareSync(password, userToLogin.password);
+            if(passwordMatch){
+                delete userToLogin.password 
+                req.session.userLogged = userToLogin
+                
+               res.redirect('/')
+             
+            }else{
+                res.send('Contra invalida')
+            }
+        }else{
+                res.send('no se encontro el mail registrado')
+        }
+    },
+    registro : (_req, res) => {
         res.render(path.join(__dirname,'../views/users/register.ejs')) // registro.ejs
     },
-    productCart : (req, res) => {
+    productCart : (_req, res) => {
         res.render(path.join(__dirname,'../views/users/productCart.ejs')) //  productCart.ejs
     },
-    userCreate: (req, res) => {
-        let readJSON = fs.readFileSync(pathUserDB, 'utf-8');
-        let jsonParseado = JSON.parse(readJSON);
-        
-        const id = jsonParseado[jsonParseado.length - 1].id;
-        const newId = id + 1;
+    userCreate: (req, res) => {    
 
-        let newUser = {
-            id: newId,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            telefono: req.body.telefono,
-            domicilio: req.body.domicilio,
-            password: req.body.password,
-            confirmPassword: req.body.confirmPassword,
-            fotoPerfil: req.body.fotoPerfil
+        let userInDB = User.findByField('email', req.body.email);                    
+        if(userInDB){ 
+                res.render(path.join(__dirname,'../views/users/register.ejs'), {errors: { email:
+                { msg: "Este email ya se encuentra registrado"}},
+                 old: req.body})          
+        }else{
+            let data = {...req.body,
+                password: bcrypt.hashSync(req.body.password, 10),
+                fotoPerfil: req.file ? req.file.filename : ""
+            } 
+         User.createUser(data)
+         res.redirect('/login');
         }
-
-
-        let newUserlist = [...jsonParseado, newUser];
-        // let newUserList = userDB.push(newUser);
-        let newUserListString = JSON.stringify(newUserlist, null, ' ');
-
-        let guardar = fs.writeFileSync(pathUserDB, newUserListString)
-        guardar
-
-        res.redirect('/login');
+     
     },
-    quienesSomos : (req,res) => {
+    quienesSomos : (_req,res) => {
         res.render (path.join(__dirname,'../views/users/quienesSomos.ejs'))  //quienesSomos.ejs
     },
 
-    preguntasFrecuentes : (req,res) => {
+    preguntasFrecuentes : (_req,res) => {
         res.render (path.join(__dirname,'../views/users/preguntasFrecuentes.ejs')) //preguntasFrecuentes.ejs
     },
 
-    contacto : (req,res) => {
+    contacto : (_req,res) => {
         res.render (path.join(__dirname,'../views/users/contacto.ejs')) //contacto.ejs
     },
-};
+    usersList: (req, res) => {
+
+      let allUsers =  User.getAllUsers();
+        res.render('users/userList', {allUsers})
+        
+    },
+    userEdit: (req, res) => {
+        const id = parseInt(req.params.id);
+        const userEdit = User.findByPk(id);
+        res.render('users/userEdit', {userEdit})  //  pagina de deición de usuario
+    },
+    userEditSave: (req, res) => {
+            const nuevoId = parseInt(req.body.id);
+            const nuevoNombre = req.body.nombre;
+            const nuevoApellido = req.body.apellido;
+            const nuevoEmail = req.body.email;
+            const nuevoTelefono = req.body.telefono;
+            const nuevoDomicilio = req.body.domicilio;
+            const nuevopassword = req.body.password;
+            const nuevoconfirmpassword = req.body.confirmPassword;
+            const nuevofotoPerfil = req.file ? req.file.filename : "";
+    
+            let allUsers = JSON.parse(fs.readFileSync(User.filename, 'utf-8'));     
+            allUsers.map( e => {
+                if (e.id == nuevoId) {
+                    e.id = nuevoId
+                    e.nombre = nuevoNombre;
+                    e.apellido = nuevoApellido;
+                    e.email = nuevoEmail;
+                    e.telefono = nuevoTelefono;
+                    e.domicilio = nuevoDomicilio;
+                    e.password = nuevopassword;
+                    e.confirmPassword = nuevoconfirmpassword;
+                    e.fotoPerfil =  nuevofotoPerfil == "" ? e.fotoPerfil:  nuevofotoPerfil;
+                }
+            });
+    
+            fs.writeFile(User.filename, JSON.stringify(allUsers, null, " "), (error) => {
+                if (error) {
+                    res.send(error);
+                } else {
+                    res.render('users/userList', {allUsers})
+                }
+                
+            })
+        
+        
+    },
+    userDelete: (req, res) => {
+    const id = parseInt(req.params.id);
+      let finalUsers= User.delete(id)
+       res.redirect('/usuarios')
+       res.render('users/userList', {allUsers: finalUsers})
+      
+    },
+    userDetail: (req, res) => {
+        const id = parseInt(req.params.id);
+        let userDetail = User.findByPk(id);
+        if (userDetail) {
+            res.render('users/userDetail', {userDetail});
+        } else {
+            res.send(`No se encontro a usuario ${id}`);
+        }            
+        
+    }
+ };
 
 
 module.exports = userController;
