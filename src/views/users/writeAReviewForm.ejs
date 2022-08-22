@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Write a Review</title>
+        <link rel="stylesheet" href="/css/login-styles.css">
+        <link rel="icon" href="/img/logo-icono.png">
+    </head>
+
+    <header>
+        <%- include('../partials/header.ejs')%>
+    </header>
+
+    <body>
+        <main class="login">
+            
+            <h3>Escribi tu Review del juguete id nro: </h3>
+        
+            <form action="/review" method="POST">
+                <input type="text" name="numeroCompra" placeholder="Numero de Compra" required>
+                <input type="textarea" name="review" placeholder="Escribe tu opinion" required>
+                <input type="submit" value="Enviar" class="botonLogin">
+            </form>
+
+            <div class="links">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <br>
+                <a href="/registro">Registrarte</a>
+            </div>
+            <div>
+                <%- include('../partials/whatsappButton.ejs') %>
+            </div>
+            
+        
+        </main>
+        
+    </body>
+
+    <footer>
+        <%-include('../partials/footer.ejs') %>
+    </footer>
+</html>

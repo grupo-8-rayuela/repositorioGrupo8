@@ -12,7 +12,24 @@
                 <i class="fa-solid fa-truck"></i>
                 <h4>Envío gratis a partir de $ 5000</h4>
             </section>
+
+
+            
             <section class="header-topbar">
+                <div class="user-style">
+                <% if (locals.isLogged) { %>
+
+                    <% if (locals.userLogged.fotoPerfil == "" ) { %>
+                        <img src="/img/users/undefined-user1280.png" alt="fotoPerfil" class="user-style__img">
+                        <% } else { %> 
+                        <img src="/img/users/<%= locals.userLogged.fotoPerfil %>" alt="fotoPerfil" class="user-style__img">
+                        <% } %>
+
+                    Hola <%= locals.userLogged.nombre %>
+                    <a href="/logout" class="user-style__logout">Logout</a>
+                <% } %>
+                </div>
+
                 <div class="header-topbar-burger-menu">
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa-solid fa-bars"></i></a>
                     <script>

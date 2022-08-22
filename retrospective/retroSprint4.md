@@ -1,4 +1,4 @@
-# Sprint 4: Starfish Retrospective
+> # Sprint 4: Starfish Retrospective
 *Continuamos implementando la dinámica Starfish para seguir evaluando nuestro desempeño grupal. Las conclusiones obtenidas en esta iteración son las siguientes:*
 
 ------------

@@ -41,23 +41,47 @@
             <br>
         <form action="/registro" method="POST" enctype="multipart/form-data" >
             
-            <input type="text" name="nombre" placeholder="Nombre"  required>
-            <input type="text" name="apellido" placeholder="Apellido"  required>
-            <input type="email" name="email" placeholder="E-mail"  required>
-            <% if(locals.errors && errors.email){%>
-                <div>
-                    <p><%= errors.email.msg %></p>
-                </div>
-                <%}%>
-            <input type="number" name="telefono" placeholder="Telefono"  required>
-            <input type="text" name="domicilio" placeholder="Domicilio"  required>
-            <input type="password" name="password" placeholder="Contraseña"  required>
-            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" required>
+            <input type="text" name="nombre" placeholder="Nombre"
+            value="<%= locals.oldData ? oldData.nombre : null %>">
+            <% if (locals.errors && errors.nombre) { %>
+                <p class="msg-error"><%= errors.nombre.msg %></p>
+            <% } %>
+            <input type="text" name="apellido" placeholder="Apellido"
+            value="<%= locals.oldData ? oldData.apellido : null %>">
+            <% if (locals.errors && errors.apellido) { %>
+                <p class="msg-error"><%= errors.apellido.msg %></p>
+            <% } %>
+            <input type="text" name="email" placeholder="E-mail"
+            value="<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) { %>
+                <p class="msg-error"><%= errors.email.msg %></p>
+            <% } %>
+            <input type="text" name="telefono" placeholder="Telefono"
+            value="<%= locals.oldData ? oldData.telefono : null %>">
+            <% if (locals.errors && errors.telefono) { %>
+                <p class="msg-error"><%= errors.telefono.msg %></p>
+            <% } %>
+            <input type="text" name="domicilio" placeholder="Domicilio"
+            value="<%= locals.oldData ? oldData.domicilio : null %>">
+            <% if (locals.errors && errors.domicilio) { %>
+                <p class="msg-error"><%= errors.domicilio.msg %></p>
+            <% } %>
+            <input type="password" name="password" placeholder="Contraseña">
+            <% if (locals.errors && errors.password) { %>
+                <p class="msg-error"><%= errors.password.msg %></p>
+            <% } %>
+            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña">
+            <% if (locals.errors && errors.confirmPassword) { %>
+                <p class="msg-error"><%= errors.confirmPassword.msg %></p>
+            <% } %>
             
             <!-- Foto de Usuario -->
             <div class="register-look-for-img">
                 <h4>Foto de perfil (opcional)</h4>
                 <input type="file" name="fotoPerfil">
+                <% if (locals.errors && errors.fotoPerfil) { %>
+                <p class="msg-error"><%= errors.fotoPerfil.msg %></p>
+                <% } %>
             </div>
         
             <br>

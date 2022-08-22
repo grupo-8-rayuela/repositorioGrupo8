@@ -1,7 +1,11 @@
-function guestMiddleware(req,res,next){
-    if (req.session.userLogged == undefined){
-        next ();
-    }else{
-        res.send ("Esta pagina es solo para invitados - Usted ya se encuentra registrado");
-    }}
-    module.exports = guestMiddleware;
+function guestMiddleware (req, res, next) {
+    
+    if (req.session.userLogged) {
+        // let id = req.session.userLogged.id
+        let userDetail = req.session.userLogged
+        return res.render('users/userDetail', { 'userDetail': userDetail })
+    }
+    next();
+};
+
+module.exports = guestMiddleware;

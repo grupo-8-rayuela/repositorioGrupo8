@@ -79,10 +79,10 @@
  {
   "id": 8,
   "nombre": "Analia",
-  "apellido": "Esposito",
+  "apellido": "Spina",
   "email": "abaespo@gmill.com",
-  "telefono": "119635987456",
-  "domicilio": "Chile 456",
+  "telefono": "119635987465",
+  "domicilio": "Chile 654",
   "password": "3322",
   "confirmPassword": "3322",
   "fotoPerfil": "img-user-1657906088892.png"
@@ -243,7 +243,7 @@
  },
  {
   "id": 24,
-  "nombre": "Fede",
+  "nombre": "Federico",
   "apellido": "Echeverria",
   "email": "fede@lolmail.com",
   "telefono": "116699887744",
@@ -298,35 +298,212 @@
  },
  {
   "id": 29,
-  "nombre": "Romina",
-  "apellido": "Rodesssssssssss",
-  "email": "rominarodes@gmail.com",
-  "telefono": "1555996575",
-  "domicilio": "mmm",
-  "password": "$2a$10$6g2zoinVnB9woY3KpwAi7eSdt3.EJhQ/NgGTbZ4JYGCmbs.R9fQ4O",
-  "confirmPassword": "1234",
-  "fotoPerfil": "img-user-1659056206857.jpg"
- },
- {
-  "id": 30,
-  "nombre": "Denise",
-  "apellido": "Apellido",
-  "email": "denn.arcuri@gmail.com",
-  "telefono": "46345",
-  "domicilio": "srgd",
-  "password": "$2a$10$qq65EbdxwSCGFsje5Mz8hOlwHjsRtWHTDzjEjsP.HlkU26iX6ecI2",
-  "confirmPassword": "1234",
+  "nombre": "hugo",
+  "apellido": "sivori",
+  "email": "huguito@gmail.com",
+  "telefono": "654789",
+  "domicilio": "Junin 457",
+  "password": "12345678",
   "fotoPerfil": ""
  },
  {
   "id": 31,
-  "nombre": "Deni",
-  "apellido": "Arcuri",
-  "email": "diar_72@hotmail.com",
-  "telefono": "123453",
-  "domicilio": "sgrs",
-  "password": "$2a$10$AEPsgEpmYglIfu0.Y/we4eoIWA2utLHKVRf9e09Ee/Jt5wlzNbVCC",
-  "confirmPassword": "1234",
+  "nombre": "debora",
+  "apellido": "granada",
+  "email": "deb@gmail.com",
+  "telefono": "4567898",
+  "domicilio": "Urquiza 225",
+  "password": "12345678",
   "fotoPerfil": ""
+ },
+ {
+  "id": 32,
+  "nombre": "Rodrigo",
+  "apellido": "Balmacera",
+  "email": "balma@gmall.com",
+  "telefono": "456789",
+  "domicilio": "Azcuenaga 333",
+  "password": "87654321",
+  "fotoPerfil": ""
+ },
+ {
+  "id": 34,
+  "nombre": "Gonzalo",
+  "apellido": "Sanatea",
+  "email": "gonza@gmail.com",
+  "telefono": "45678965",
+  "domicilio": "Avellaneda 569",
+  "password": "12345678",
+  "fotoPerfil": "img-user-1659123690879.png"
+ },
+ {
+  "id": 35,
+  "nombre": "Helena",
+  "apellido": "Almeria",
+  "email": "helen@gmail.com",
+  "telefono": "4567894",
+  "domicilio": "Moreno 569",
+  "password": "12345678",
+  "fotoPerfil": "img-user-1659124099973.jpg"
+ },
+ {
+  "id": 38,
+  "nombre": "Alberto",
+  "apellido": "Livingston",
+  "email": "livin@gmeil.com",
+  "telefono": "6655997744",
+  "domicilio": "Gral Mitre 2678",
+  "password": "$2a$10$FDJu/G/2CwTgP/XP26tIQOcNzs1.11oOzp0BEhWKfbx0gwQwiEYAK",
+  "fotoPerfil": "img-user-1659126652528.png"
+ },
+ {
+  "id": 39,
+  "nombre": "Ana",
+  "apellido": "Derby",
+  "email": "derb@homail.com",
+  "telefono": "65478965",
+  "domicilio": "Ñuñez 654",
+  "password": "$2a$10$6prBj6991khu/5FE0dJAHunqKHk0.GQCsp.34dhCfrctXNRHGj0ki",
+  "fotoPerfil": "img-user-1659126826940.png"
+ },
+ {
+  "id": 40,
+  "nombre": "Marcos ",
+  "apellido": "Salgán",
+  "email": "marcs@yuhu.com",
+  "telefono": "66998844",
+  "domicilio": "Italia 995",
+  "password": "$2a$10$0N4tC09sV9zG2uS.JUFuOugutZBpggAx1pVmMJVvuRrCaW29Vrzdu",
+  "fotoPerfil": "img-user-1659126918430.png"
+ },
+ {
+  "id": 41,
+  "nombre": "Jessica ",
+  "apellido": "Rabin",
+  "email": "rabjes@gmeil.com",
+  "telefono": "66448877",
+  "domicilio": "Anchorena 667",
+  "password": "$2a$10$kGB.NrBTWJoxaBYCTqh19OgYlfjVzWG8UytHTso0qaeRHdG4a5R1q",
+  "fotoPerfil": "img-user-1659126994712.png"
+ },
+ {
+  "id": 42,
+  "nombre": "Monique",
+  "apellido": "Della Rivere",
+  "email": "della@homeil.com",
+  "telefono": "44557788",
+  "domicilio": "Honduras 547",
+  "password": "$2a$10$AxXb8wvdVg4LWi9FVPWhO.1EkdQ83A07O9rRdz4S81A430SVQGDO2",
+  "fotoPerfil": "img-user-1659128429539.png"
+ },
+ {
+  "id": 43,
+  "nombre": "Tiffany",
+  "apellido": "Riverdall",
+  "email": "tiff@gmail.com",
+  "telefono": "44557766",
+  "domicilio": "Coronel Diaz 2532",
+  "password": "$2a$10$W2wgY62JHKlI9X.u8SV18Oy/n2er3tjceCpTM1tyVh3seaHzyf42a",
+  "fotoPerfil": "img-user-1659128532449.png"
+ },
+ {
+  "id": 44,
+  "nombre": "Sebastián ",
+  "apellido": "Serizolo",
+  "email": "seriz@yuhu.com",
+  "telefono": "666445",
+  "domicilio": "Tapiales 1467",
+  "password": "$2a$10$yoaq5kjmJQwIEJ/Q5L1SUu/53EHGCZNQMWp5fiQeaarf6aJvmYgG.",
+  "fotoPerfil": "img-user-1659128621073.png"
+ },
+ {
+  "id": 45,
+  "nombre": "Raul",
+  "apellido": "Rabena",
+  "email": "rab@yuhu.com",
+  "telefono": "66699444",
+  "domicilio": "Costa Rica 1498",
+  "password": "$2a$10$VMHYpMKQpiSUxdFinOXIyuxX841CrMZiI.uznyGRX9ywNMNscePqS",
+  "fotoPerfil": "img-user-1659128693377.png"
+ },
+ {
+  "id": 46,
+  "nombre": "Camila ",
+  "apellido": "Presto",
+  "email": "cami@gmeil.com",
+  "telefono": "64559988",
+  "domicilio": "España 589",
+  "password": "$2a$10$Zso1UaJ/8K5DM8eB5lwhm.Sc0uT21LwBSrZP5by3XGUbcquEA1bxu",
+  "fotoPerfil": "img-user-1659367780184.png"
+ },
+ {
+  "id": 47,
+  "nombre": "Marcos",
+  "apellido": "Salgán",
+  "email": "marquitos@yuhumail.com",
+  "telefono": "65987458",
+  "domicilio": "Italia 125",
+  "password": "$2a$10$npIWNt6NU75x5YmVnHPro.ag22IWlf4vuyf0rQqUQODmKn4Te5zPC",
+  "fotoPerfil": "img-user-1659367898073.png"
+ },
+ {
+  "id": 48,
+  "nombre": "Rupert",
+  "apellido": "Eisenstein",
+  "email": "eise@gmeil.com",
+  "telefono": "6699885533",
+  "domicilio": "Francia 334",
+  "password": "$2a$10$KTL4sln3tk/RyabqSnezFOYK5DUuiQofF73s.AcIqOp84KBrDZkr.",
+  "fotoPerfil": "img-user-1660327903358.png"
+ },
+ {
+  "id": 49,
+  "nombre": "Gabriela",
+  "apellido": "Trillo",
+  "email": "trillo@yuhumeil.com",
+  "telefono": "6655447788",
+  "domicilio": "Guatemala 234",
+  "password": "$2a$10$AmX9AfkJCwLqmo5s.M2KgugFOskAcIVHs06U3CC07jAkC/C7JRAOO",
+  "fotoPerfil": "img-user-1659368150344.png"
+ },
+ {
+  "id": 50,
+  "nombre": "Lidia",
+  "apellido": "Torrontesi",
+  "email": "torront@homeil.com",
+  "telefono": "6655998877",
+  "domicilio": "Estados Unidos 1256",
+  "password": "$2a$10$6cuIRs5lYl7JrdAjyFeqEODmY5mqLgw0aUh8IsZ1lyuwT4ebRzL7W",
+  "fotoPerfil": "img-user-1659368255126.png"
+ },
+ {
+  "id": 51,
+  "nombre": "Julio",
+  "apellido": "Estenssoro",
+  "email": "esten@homeil.com",
+  "telefono": "6633225544",
+  "domicilio": "Cordoba 1654",
+  "password": "$2a$10$TmIlJ5k9vMnIWD4D2Rc0PugmokTTRXzqqNbGo3BfjBfe0xEz8aIPi",
+  "fotoPerfil": "img-user-1659368368878.png"
+ },
+ {
+  "id": 52,
+  "nombre": "Julieta ",
+  "apellido": "Rossi",
+  "email": "rossi@gmeil.com",
+  "telefono": "6655994789",
+  "domicilio": "Montevideo 2697",
+  "password": "$2a$10$5swlFeAq7.efnOIb7qNxjOwB9kU4K/mwOIfJpaCLl/IkX/BmHBqDi",
+  "fotoPerfil": "img-user-1659368482169.png"
+ },
+ {
+  "id": 53,
+  "nombre": "Manuel",
+  "apellido": "Ugart",
+  "email": "Manugart@gmeil.com",
+  "telefono": "64978546",
+  "domicilio": "Uruguay 2111",
+  "password": "$2a$10$v4THzhu8EocsEe8.w3gz9.3eUKKpfK141IKKZjCURx6GmIMWhg29y",
+  "fotoPerfil": "img-user-1659368643261.png"
  }
 ]

@@ -6,9 +6,9 @@ const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const session = require('express-session')
-//const cookieParser = require('cookie-parser');
-const recordameMiddleware = require('./middlewares/recordameMiddleware');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 app.use(express.static(path.join(__dirname,'../public')));
 
@@ -26,6 +26,8 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use(cookies());
+app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter);
 app.use(userRouter);

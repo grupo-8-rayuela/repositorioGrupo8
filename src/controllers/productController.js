@@ -31,14 +31,9 @@ module.exports = {
               cuatro.push(data.filter(e => e.categoria !== juguete.categoria)[i])
             }
           };
-           let starRaitingSum = 0;
-            for(let i =0; i<juguete.reviews.length; i++){
-              (starRaitingSum +   juguete.reviews[i].raiting)
-            }
-            let starRaitingWidth = starRaitingSum/juguete.reviews.length;
-            
          
-      res.render("product/productDetail", { juguete, cuatro, starRaitingWidth});           
+         
+      res.render("product/productDetail", { juguete, cuatro});           
     } else {
       res.send("No existe el juguete");
     }
@@ -70,6 +65,7 @@ module.exports = {
       ancho: req.body.ancho,
       profundidad: req.body.profundidad,
       reviews: [],
+      rating: 0,
     };
 
        data.push(newProduct);
@@ -147,6 +143,8 @@ module.exports = {
         product.altura= altura;
         product.ancho= ancho;
         product.profundidad= profundidad;
+        product.reviews= [];
+        product.rating= 0;
         
       } else {
       res.sendStatus(404);

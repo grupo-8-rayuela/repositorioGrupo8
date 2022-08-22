@@ -79,7 +79,7 @@
     display: flex;
     width:40%;
     padding: 10px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     
 
@@ -201,3 +201,24 @@
 }
 
 
+.user-style {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 10%;
+   text-decoration: none;
+}
+
+.user-style__img {
+    width: 70%
+}
+
+.user-style__logout {
+    text-decoration: none;
+    
+}
+
+.user-style a:visited {
+    color: black
+}

@@ -41,19 +41,42 @@
             <br>
         <form action="/edicion-usuario?_method=PUT" method="POST" enctype="multipart/form-data">
             
-            <input type="text" name="id" placeholder="Nombre" value="<%= userEdit.id %>" readonly="true">
-            <input type="text" name="nombre" placeholder="Nombre" value="<%= userEdit.nombre %>" required>
-            <input type="text" name="apellido" placeholder="Apellido" value="<%= userEdit.apellido %>"  required>
-            <input type="email" name="email" placeholder="E-mail" value="<%= userEdit.email %>" required>
-            <input type="number" name="telefono" placeholder="Telefono" value="<%= userEdit.telefono %>" required>
-            <input type="text" name="domicilio" placeholder="Domicilio" value="<%= userEdit.domicilio %>"  required>
-            <input type="password" name="password" placeholder="Contraseña" value="<%= userEdit.password %>" required>
-            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" value="<%= userEdit.confirmPassword %>" required>
+            <input type="text" name="id" placeholder="Nombre" 
+            value="<%= userEdit.id %>" readonly="true">
+            <input type="text" name="nombre" placeholder="Nombre" 
+            value="<%= locals.oldData ? oldData.nombre : userEdit.nombre %>">
+            <% if (locals.errors && errors.nombre) { %>
+                <p class="msg-error"><%= errors.nombre.msg %></p>
+            <% } %>
+            <input type="text" name="apellido" placeholder="Apellido" 
+            value="<%= locals.oldData ? oldData.apellido : userEdit.apellido %>">
+            <% if (locals.errors && errors.apellido) { %>
+                <p class="msg-error"><%= errors.apellido.msg %></p>
+            <% } %>
+            <input type="email" name="email" placeholder="E-mail" 
+            value="<%= locals.oldData ? oldData.email : userEdit.email %>">
+            <% if (locals.errors && errors.email) { %>
+                <p class="msg-error"><%= errors.email.msg %></p>
+            <% } %>
+            <input type="number" name="telefono" placeholder="Telefono" 
+            value="<%= locals.oldData ? oldData.telefono : userEdit.telefono %>">
+            <% if (locals.errors && errors.telefono) { %>
+                <p class="msg-error"><%= errors.telefono.msg %></p>
+            <% } %>
+            <input type="text" name="domicilio" placeholder="Domicilio" 
+            value="<%= locals.oldData ? oldData.domicilio : userEdit.domicilio %>">
+            <% if (locals.errors && errors.domicilio) { %>
+                <p class="msg-error"><%= errors.domicilio.msg %></p>
+            <% } %>          
             
             <!-- Foto de Usuario -->
             <div class="register-look-for-img">
                 <h4>Foto de perfil (opcional)</h4>
                 <input type="file" name="fotoPerfil">
+                <% if (locals.errors && errors.fotoPerfil) { %>
+                    <p class="msg-error"><%= errors.fotoPerfil.msg %></p>
+                    <% } %>
+                </div>
             </div>
         
             <br>

@@ -57,13 +57,15 @@
                     <span class="productInfo_info">
                         <h1 class="product-name"> <%= juguete.nombre %> </h1>
                         <span class="reviews">
-                          
+                        
                             <h2>Reviews (<%=juguete.reviews.length%>)</h2>
                       
                             <div class="stars-outer">
-                                <div class="stars-inner"></div>
+                                <div class="stars-inner" style ="width:<%=juguete.rating %>%">
+
+                                </div>
                             </div>
-                            <div class="stars-inner" ></div>
+                           
                           
                         </span>
                      
@@ -90,7 +92,6 @@
                 </div>
                 </span>
                 </div>
-
             </article>
             <article class="product_masInfo">
                 <h3>Descripcion</h3>
@@ -115,7 +116,6 @@
                 </table>
             </article>
         </section>
-
         <h2 id="h-tambien-te-puede-gustar">Tambien te puede gustar</h2>
     <section class="tambien-te-puede-gustar">
         

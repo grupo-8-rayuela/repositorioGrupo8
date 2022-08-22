@@ -18,7 +18,8 @@
     "reviews": [
       { "userId": 3, "review": "Lorem", "rating": 78 },
       { "userId": 3, "review": "Lorem", "rating": 50 }
-    ]
+    ],
+    "rating": 60
   },
   {
     "id": 2,
@@ -35,8 +36,8 @@
     "altura": "36",
     "ancho": "22",
     "profundidad": "16",
-    "dimensiones": "15 cm x 10 cm x 5 cm",
-    "reviews": []
+    "reviews": [{ "userId": 3, "review": "Lorem", "rating": 50 }],
+    "rating": 50
   },
   {
     "id": 3,
@@ -53,7 +54,8 @@
     "altura": "10",
     "ancho": "5",
     "profundidad": "5",
-    "dimensiones": "15 cm x 10 cm x 5 cm"
+    "reviews": [{ "userId": 8, "review": "Lorem", "rating": 60 },{ "userId": 5, "review": "Lorem", "rating": 100 }, { "userId": 8, "review": "Lorem", "rating": 60 },{ "userId": 5, "review": "Lorem", "rating": 20 }],
+    "rating": 60
   },
   {
     "id": 4,
@@ -69,7 +71,9 @@
     "materiales": "madera",
     "altura": "43",
     "ancho": "52",
-    "profundidad": "25"
+    "profundidad": "25",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 5,
@@ -85,7 +89,9 @@
     "materiales": "Madera",
     "altura": "15",
     "ancho": "15",
-    "profundidad": "10"
+    "profundidad": "10",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 6,
@@ -101,7 +107,9 @@
     "materiales": "Plastico y madera",
     "altura": "35",
     "ancho": "15",
-    "profundidad": "10"
+    "profundidad": "10",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 7,
@@ -118,7 +126,8 @@
     "altura": "20",
     "ancho": "15",
     "profundidad": "10",
-    "dimensiones": "10 cm x 10 cm x 15 cm"
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 8,
@@ -135,7 +144,8 @@
     "altura": "40",
     "ancho": "40",
     "profundidad": "30",
-    "dimensiones": "60 cm x 40 cm x 30 cm"
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 9,
@@ -152,7 +162,8 @@
     "altura": "25",
     "ancho": "30",
     "profundidad": "15",
-    "dimensiones": "70 cm x 50 cm x 25 cm"
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 10,
@@ -169,7 +180,8 @@
     "altura": "10",
     "ancho": "5",
     "profundidad": "4",
-    "dimensiones": "35 cm x 15 cm x 25 cm"
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 11,
@@ -185,7 +197,9 @@
     "materiales": "Goma",
     "altura": "45",
     "ancho": "20",
-    "profundidad": "2"
+    "profundidad": "2",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 12,
@@ -201,7 +215,9 @@
     "materiales": "Madera",
     "altura": "2",
     "ancho": "2",
-    "profundidad": "4"
+    "profundidad": "4",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 13,
@@ -217,7 +233,9 @@
     "materiales": "deew",
     "altura": "5",
     "ancho": "4",
-    "profundidad": "2"
+    "profundidad": "2",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 14,
@@ -233,7 +251,9 @@
     "materiales": "zzzzz",
     "altura": "2",
     "ancho": "5",
-    "profundidad": "5"
+    "profundidad": "5",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 15,
@@ -248,7 +268,9 @@
     "materiales": "Madera",
     "altura": "23",
     "ancho": "33",
-    "profundidad": "22"
+    "profundidad": "22",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 18,
@@ -263,7 +285,9 @@
     "materiales": "Metal",
     "altura": "22",
     "ancho": "22",
-    "profundidad": "22"
+    "profundidad": "22",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 19,
@@ -283,7 +307,9 @@
     "materiales": ",m,",
     "altura": "3",
     "ancho": "3",
-    "profundidad": "3"
+    "profundidad": "3",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 20,
@@ -298,7 +324,9 @@
     "materiales": "madera",
     "altura": "45",
     "ancho": "5",
-    "profundidad": "555"
+    "profundidad": "555",
+    "reviews": [],
+    "rating": 0
   },
   {
     "id": 21,
@@ -314,6 +342,7 @@
     "altura": "1",
     "ancho": "12",
     "profundidad": "2",
-    "reviews": []
+    "reviews": [],
+    "rating": 0
   }
 ]

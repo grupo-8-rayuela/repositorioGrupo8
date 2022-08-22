@@ -1,5 +1,5 @@
-# Sprint 3: Daily Standup
-*Hemos venido implementando reuniones desde el comienzo del proyecto. Luego de repartirnos las tareas con la ayuda de la herramienta on-line Trello, hablamos brevemente en las reuniones, sobre lo que hemos hecho, las dificultados encontradas al hacer la tarea, como hemos solucionado esas dificultades, y sobre lo que haremos a continuación.  *
+> # Sprint 3: Daily Standup
+*Hemos venido implementando reuniones desde el comienzo del proyecto. Luego de repartirnos las tareas con la ayuda de la herramienta on-line Trello, hablamos brevemente en las reuniones, sobre lo que hemos hecho, las dificultados encontradas al hacer la tarea, como hemos solucionado esas dificultades, y sobre lo que haremos a continuación.*
 
 ------------
 
