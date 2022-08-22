@@ -306,5 +306,27 @@
   "password": "$2a$10$6g2zoinVnB9woY3KpwAi7eSdt3.EJhQ/NgGTbZ4JYGCmbs.R9fQ4O",
   "confirmPassword": "1234",
   "fotoPerfil": "img-user-1659056206857.jpg"
+ },
+ {
+  "id": 30,
+  "nombre": "Denise",
+  "apellido": "Apellido",
+  "email": "denn.arcuri@gmail.com",
+  "telefono": "46345",
+  "domicilio": "srgd",
+  "password": "$2a$10$qq65EbdxwSCGFsje5Mz8hOlwHjsRtWHTDzjEjsP.HlkU26iX6ecI2",
+  "confirmPassword": "1234",
+  "fotoPerfil": ""
+ },
+ {
+  "id": 31,
+  "nombre": "Deni",
+  "apellido": "Arcuri",
+  "email": "diar_72@hotmail.com",
+  "telefono": "123453",
+  "domicilio": "sgrs",
+  "password": "$2a$10$AEPsgEpmYglIfu0.Y/we4eoIWA2utLHKVRf9e09Ee/Jt5wlzNbVCC",
+  "confirmPassword": "1234",
+  "fotoPerfil": ""
  }
 ]

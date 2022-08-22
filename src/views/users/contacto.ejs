@@ -21,15 +21,16 @@
 </header>
 
 <body>
-    <div class="body-Contacto">
- <div class="datosContacto">
-   <h3>whatsapp</h3>
-   <h4>15-XXXX-XXXX</h4>
-<br>
- <h3>Email</h3>
- <h4>grupo_8_rayuela@outlook.com</h4>
+<div class="fullContacto"> 
+
+ <div class="body-Contacto">
+      <div class="datosContacto">
+     <h3>whatsapp: 15-XXXX-XXXX</h3>
+     <br>
+    <h3>Email: grupo_8_rayuela@outlook.com</h3>
    
- </div>
+   </div>
+<br>
 
  <div class="contactoEmail">
     <form action="/contactoEmailForm" method="POST">
@@ -39,11 +40,10 @@
         <textarea name="comentario" placeholder="Deje su comentario" value="comentario" required></textarea>   
     </form>
     <button id=buttonsubmit type="submit" value="submitir">Submitir</button>
-
  </div>
 </div>
     
-
+</div>
 </body>
 <div>
     <%- include('../partials/whatsappButton.ejs') %>

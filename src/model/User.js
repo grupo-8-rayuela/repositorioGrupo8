@@ -55,11 +55,4 @@ return finalUsers
 
 }
 
-
-
-
-
-
-
-
 module.exports = User;

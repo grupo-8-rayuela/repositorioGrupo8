@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/pruebahome-styless.css" title="cont">
+        <link rel="stylesheet" href="/css/porCategoria-styles.css" title="cont">
         <script src="https://kit.fontawesome.com/4c9feabc71.js" crossorigin="anonymous"></script>
         <title>Rayuela</title>
     </head>
@@ -39,48 +39,16 @@
     </div>
    
 
-        <h2 class="home_header">Elegí por Edad</h2>
-
-        <div class="container">
-            <article class="card">
-                
-                <img src="/img/categoria-6meses.png" alt="banco">
-            <div>
-                <a href="/edad/1">De 6 meses a 1 año</a>
-            </div>
-            </article>
-
-            <article class="card">
-                <img src="/img/categoria-1año.png" alt="banco">
-                <div>
-                <a href="/edad/2">De 1 años a 3 años</a>
-            </div>
-            </article>
-
-            <article class="card">
-                <img src="/img/categoria-3años.png" alt="banco">
-                <div>
-                <a href="/edad/3">De 3 años a 6 años</a>
-            </div>
-            </article>
-
-            <article class="card">
-                <img src="/img/categoria-6años.png" alt="banco">
-                <div>
-                <a href="/edad/4">Mas de 6 años</a>
-            </div>
-            </article>
-                
-        </div>
-
+      
+    <%- include('../views/partials/seccionTbnMeGusta.ejs') %>
    </section> 
    
-   <footer>
-
-    <%-include('../views/partials/footer.ejs')%>
-
-</footer>
+  
 
 
 </body>
+
 </html>
+<footer>
+    <%-include('../views/partials/footer.ejs')%>
+</footer>

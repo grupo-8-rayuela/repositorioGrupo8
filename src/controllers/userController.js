@@ -5,6 +5,7 @@ const User = require('../model/User');
 const bcrypt = require('bcryptjs');
 const { findByField } = require('../model/User');
 const { send } = require('process');
+// const usersJson = require('../database/users.json',)
 
 
 const userController = {
@@ -12,21 +13,23 @@ const userController = {
        res.render(path.join(__dirname,'../views/users/login')) // login ejs
     },
     processLogin: (req,res)=>{
-        const { email,
-        password}=req.body;
+        const {email, password} =req.body;
         let userToLogin = User.findByField('email', email);
         if(userToLogin){
             let passwordMatch = bcrypt.compareSync(password, userToLogin.password);
             if(passwordMatch){
                 delete userToLogin.password 
                 req.session.userLogged = userToLogin
-                
-               res.redirect('/')
-             
-            }else{
+                 res.redirect('/')
+        if(req.body.recordame != undefined) {
+            res.cookie ('recordame',
+            usertoLogin.email, {maxAge:120000}
+            )
+        }
+              }else{
                 res.send('Contra invalida')
             }
-        }else{
+              }else{
                 res.send('no se encontro el mail registrado')
         }
     },

@@ -1,9 +1,54 @@
+
+.fullContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .body-Contacto {
     margin-top: 230px;
+    width: 80%;
+}
+
+.datosContacto {
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .contactoEmail {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contactoEmail form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 100%;
+}
+
+.contactoEmail form input {
+    margin: 5px;
+    width: 35%;
+}
+
+.contactoEmail form textarea {
+    margin: 5px;
+    width: 35%;
+}
+
+.contactoEmail button {
+    text-align: center;
+    display: block;
+    margin: 20px;
+    
 }

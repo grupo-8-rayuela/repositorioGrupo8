@@ -9,37 +9,49 @@
     font-size: 14px;
 }
 
-ul  {
+footer {
+    background-color:#C2DED1;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    text-decoration: none;   
+    width:100%;
+    padding:15px;
+}
+
+ul  {
     text-decoration: none;
     list-style: none;
     align-items: center;
     margin: right;  
+    width: 80%;
 }
 
-
-footer {
-    background-color:#C2DED1;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-decoration: none;
+#footer-logo {
+    width: 200px;
+    /* display: flex; */
+    /* align-items: flex-start; */
 }
 
-footer ul {
+.lista-footer {
     display: flex;
-    flex-direction: column;
+    /* background-color: red; */
+    flex-wrap: nowrap;
+    justify-content: space-between;
     color: #7D7D7D;
     text-decoration: none;
+    align-items: center;
+    width: 90%;
 }
+
+
 
 footer ul li a {
     list-style: none;
     text-decoration: none;
     margin: 5px;
     color: #7D7D7D;
+    justify-content: center;
 }
 
 .lista-redes {
@@ -60,6 +72,7 @@ footer ul li a {
     width: 25%;
     font-size: 1rem;
     text-decoration: none;
+
 }
 
 .lista-medios-pago li { 
@@ -70,11 +83,11 @@ footer ul li a {
 }
 
 .lista-redes li img {
-    width: 35px;
+    width: 40px;
 }
 
 .lista-medios-pago li img {
-    width: 35px;
+    width: 40px;
     margin: 3px;
 }
 
@@ -87,4 +100,26 @@ footer ul li a {
 ul li h4 {
     text-align: center;
     color: #7D7D7D;
+    font-size: 25px;
+    justify-content: center;
+
+}
+
+ul li h5 {
+    font-size: 20px ;
+}
+
+@media (max-width:870px) {
+    ul li h5 {
+        display: none;
+    }
+}
+
+@media (max-width:610px) {
+    .medios-de-pago {
+        display: none;
+    }
+    #footer-logo {
+        width: 90%;
+    }
 }

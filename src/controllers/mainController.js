@@ -27,7 +27,7 @@ module.exports = {
           cuatro.push(data.filter(e => e.enPromo !== true)[i])
         }
       }
-        res.render('pruebaHome', {data, categorias, cuatro}); // prueba de pagina home dinamica
+        res.render('porCategoria', {data, categorias, cuatro}); // prueba de pagina home dinamica
     },
     indexEdad: (req, res) => {
         let edad=
