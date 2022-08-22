@@ -50,16 +50,6 @@ return false
 return finalUsers
 
 },
-
-
-
 }
-
-
-
-
-
-
-
 
 module.exports = User;

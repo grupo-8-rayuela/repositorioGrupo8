@@ -505,5 +505,15 @@
   "domicilio": "Uruguay 2111",
   "password": "$2a$10$v4THzhu8EocsEe8.w3gz9.3eUKKpfK141IKKZjCURx6GmIMWhg29y",
   "fotoPerfil": "img-user-1659368643261.png"
+ },
+ {
+  "id": 54,
+  "nombre": "Denise",
+  "apellido": "Arcuri",
+  "email": "diar_72@hotmail.com",
+  "telefono": "1556557726",
+  "domicilio": "Fraga86",
+  "password": "$2a$10$tE4Sd4fBixJYyjlrxFlDueB4jN0ZPOUu1Dp0/t0zdOFgLy17/XieG",
+  "fotoPerfil": "img-user-1661131545209.jpg"
  }
 ]

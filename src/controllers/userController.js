@@ -143,7 +143,7 @@ const userController = {
     userEdit: (req, res) => {
         const id = parseInt(req.params.id);
         const userEdit = User.findByPk(id);
-        res.render('users/userEdit', {userEdit})  //  pagina de deición de usuario
+        res.render('users/userEdit', {userEdit})  //  pagina de edición de usuario
     },
     userUpdate: (req, res) => {
         const resultValidation = validationResult(req);
