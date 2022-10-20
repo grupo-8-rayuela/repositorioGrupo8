@@ -50,7 +50,7 @@ window.addEventListener("load", function() {
         if (passwordRegister.value.length <= 8) {
           // console.log("La passowrd está vacía")
           errores.push("La password debe tener al menos 8 caracteres")
-          console.log(errores)
+          console.log(errores);
         }
 
         let passwordConfirmRegister = document.querySelector(".password-confirm-register");
