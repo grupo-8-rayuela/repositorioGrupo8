@@ -143,12 +143,14 @@
     margin-top: 10px;
     border: solid 1px rgb(197, 197, 197);
     transition: all 500ms;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .form-button:hover {
-    color:rgb(75, 75, 75);
-    background-color:rgb(197, 194, 194);
+    /* color:rgb(75, 75, 75);
+    background-color:rgb(197, 194, 194); */
+    background-color: #BDE6F1;
+    color: #73777B;
     
 }
 

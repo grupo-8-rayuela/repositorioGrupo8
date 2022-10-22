@@ -1,4 +1,4 @@
-reviewsCREATE DATABASE  IF NOT EXISTS `rayuela` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+DATABASE  IF NOT EXISTS `rayuela` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `rayuela`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --

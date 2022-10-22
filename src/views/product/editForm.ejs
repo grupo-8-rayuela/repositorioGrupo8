@@ -30,7 +30,7 @@
         
         <div class="control-formulario">
             <label for="nombre-producto">Nombre del producto</label>
-            <input type="text" name="name" class="input-control" value="<%= (locals.oldData && oldData.name)?oldData.name: jugueteEdit.name %>">
+            <input type="text" name="name" class="input-control" id="input-name" value="<%= (locals.oldData && oldData.name)?oldData.name: jugueteEdit.name %>">
             <%if(locals.errors && errors.name){%>
                 <p class="errors"><%= errors.name.msg %></p>
             <%}%>
@@ -84,7 +84,7 @@
         <div class="control-formulario">
             
             <label for="imagen-producto">Cambiar la imagen principal</label>
-            <input type="file" name="principal_img" class="control" value="<%jugueteEdit.principal_img%>"></>
+            <input type="file" name="principal_img" class="control" id="ppal-img-input" accept="image/jpg, image/png, image/jpeg, image/gif " value="<%jugueteEdit.principal_img%>"></>
             <%if(locals.errors && errors.principal_img){%>
                 <p class="errors"><%= errors.principal_img.msg %></p>
             <%}%>
@@ -147,24 +147,23 @@
             <%if(locals.errors && errors.description){%>
                 <p class="errors"><%= errors.description.msg %></p>
             <%}%>
-        </div>
+        </div>     
+
+        <div class="erroresFront">
+            <ul>
     
-                
-
-        
-       
-
-        
+            </ul>
+        </div>
 
         <div class="form-buttons">
        
-        <button type="submit" class="form-button">GUARDAR</button>
+        <button type="submit" class="form-button" id="form-button">GUARDAR</button>
     </div>
     </form>
-  
+    <script src="/js/editarProductoValidation.js"></script>
 </main>
 
-
+    
 </body>
 
 <footer>

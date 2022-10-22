@@ -22,8 +22,8 @@
     </header>
 
     <section class="banner" id="home-banner">
-        <img src="\img\banner-azul.png" alt="juguetes con fondo verde">
-    </section>
+        
+    </section>   
 
     <section class="galeria-juguetes">
 
@@ -35,7 +35,7 @@
                 </a>
                 <p>$  <%= e.price %> </p>
                 
-                <input value="<%=e.id%>" class='input-carrito' style="display:none;"><button type="submit" class="add-to-cart-button2">AGREGAR AL CARRITO<i class="fa-solid fa-bag-shopping"></i></button></input>
+                <input value="<%=e.id%>" class='input-carrito' style="display:none;"><button type="submit" class="add-to-cart-button2"><i class="fa-solid fa-bag-shopping"></i>AGREGAR AL CARRITO</button></input>
                 
             </article>
         <% }) %>
@@ -43,7 +43,7 @@
         <section class="home_categoria">
             <h2 class="home_header">Elegí por Categoría</h2>
     
-            <div class="container">
+            <div class="container categorias-de-home">
             <% categorias.map(e => { %>
             <article class="card">
               

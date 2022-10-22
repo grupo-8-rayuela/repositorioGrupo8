@@ -171,12 +171,15 @@ h2.home_header {
 
 }
 
+.categorias-de-home {
+    margin: 250px;
+}
 
 .container {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content:center;
+    justify-content: center;
     margin: auto;
 }
 
@@ -202,7 +205,8 @@ h2.home_header {
   
 }
 .container .card div:hover{
-    background-color: #82FFC2;
+    /* background-color: #82FFC2; */
+    background-color: #FFB562;
 }
 
 .container .card a {
@@ -305,7 +309,7 @@ h2.home_header {
 
 footer {
         width:100%;
-        background-color: rgb(159,212,239);
+        background-color: rgb(159,212,239); 
         padding:15px;
 }
 

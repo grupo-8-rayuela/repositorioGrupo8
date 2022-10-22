@@ -34,6 +34,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 .header-top-banner h4 {
     font-size: 1rem;
@@ -106,7 +107,7 @@
 .header-topbar {
     display: block;
     background-color: white;
-    
+    margin: 0px 0px 0px 0px ;
 }
 /*
 .header-topbar-burger-menu{
@@ -144,8 +145,8 @@
 }
 
 #header-logo {
-    width:80px;
-    margin: 5px;
+    width: 80px;
+    margin: 0 40px 0 40px ;
     border-radius: 10%;
 }
 

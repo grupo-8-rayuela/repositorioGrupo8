@@ -58,6 +58,13 @@ body {
     text-decoration: none;
 }
 
+.data-box-links:visited {
+    text-decoration: none;
+    color: #576F72;
+}
+
+
+
 .order_card_data_box2 {
     margin: 0px 25px;
     padding: 5px 15px;

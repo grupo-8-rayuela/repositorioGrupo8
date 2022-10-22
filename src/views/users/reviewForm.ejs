@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dejanos tu comentarios!</title>
-    <link rel="stylesheet" href="/css/product-styles.css" title="cont">
+    <link rel="stylesheet" href="/css/product-review-styles.css" title="cont">
     <link rel="icon" href="/img/logo-icono.png">
 </head>
 <body>
-    <header>
-        <%- include('../partials/header.ejs')%>
-    </header>
+  
 
     
     <main class="main__form">
@@ -87,10 +85,10 @@
 
     </main>
 
-
-    <footer>
-        <%-include('../partials/footer.ejs') %>
+    <footer style="display: none;">
+        <%-include('../../views/partials/footer.ejs')%>
     </footer>
+ 
     <script src="/js/pintarEstrellas.js"></script>
 </body>
 </html>

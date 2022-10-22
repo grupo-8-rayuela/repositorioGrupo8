@@ -83,15 +83,16 @@ h2.home_header {
 }
 .container .card div {
     width: 100%;
-    background-color: green;
-    opacity:0.3;
+    background-color: #F15412;
+    opacity: 0.7;
     padding: 20px;
     border-radius: 8px;
     transition: all 500ms;
   
 }
 .container .card div:hover{
-    background-color: #82FFC2;
+    background-color: #FFA500;
+    opacity: 0.7;
 }
 
 .container .card a {
