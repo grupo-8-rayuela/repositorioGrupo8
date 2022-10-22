@@ -1,5 +1,6 @@
 const db = require('../../database/models/index');
 const { name } = require('ejs');
+const e = require('express');
 
 const getUsers = async (_req, res) => {
     try {
@@ -112,6 +113,38 @@ const userDetail = async (req, res) => {
     };
     };
 
+    const salesByProduct = async (_req,res) => {
+        try {
+
+            const data = await db.Product.findAll({
+                include: [
+                    {
+                        association: 'order_detail'
+                    },
+                  
+                ]
+            });
+            const productOrders = data.map(e => {
+                return {
+                    id: e.id,
+                    productName: e.name,
+                    unidadesVendidasXProducto:  e.order_detail.map(el => el.quantity).length? e.order_detail.map(el => el.quantity).reduce((pv,cv)=> pv +cv): 0,
+                  
+            }
+        }
+            )
+
+
+            res.status(200).json({productOrders})
+
+
+
+        }catch (error) {
+            console.log(error);
+     
+        };
+    }
+
 
 
 
@@ -120,4 +153,5 @@ module.exports ={
    getUsers,
    userDetail,
    getOrders,
+   salesByProduct
 }
