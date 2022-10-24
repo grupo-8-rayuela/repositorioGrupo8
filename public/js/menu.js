@@ -48,10 +48,12 @@ window.addEventListener('load', ()=>{
                                         }
                         });
      window.addEventListener('scroll',function(){
+    let submenu = document.querySelector('.submenu');
+    let submenuEdades = document.querySelector('#subMenuEdades')
     
-        console.log('hola baner')
         banner.style.display='none';
-    
+        submenu.style.top='130px';
+        submenuEdades.style.top='130px';
     });
     
 
